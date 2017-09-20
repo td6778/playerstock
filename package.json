@@ -1,0 +1,14 @@
+{
+  "name": "ps-v-0-3-0",
+  "version": "0.3.0",
+  "description": "PlayerStock | Fanstasy Sports Without Borders",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Trent Davis",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}

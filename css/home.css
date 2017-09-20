@@ -1,0 +1,243 @@
+body  {
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans';
+}
+a:link,
+a:visited  {
+	color: #156824;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+#menu  {
+	margin-top:20px;
+	margin-left:20px;
+	color:#CCC;
+}
+#menu a:link,
+#menu a:visited {
+	font-family: 'Open Sans';
+	font-weight:900;
+	font-size: 18px;
+	text-transform:uppercase;
+	color: inherit;
+}
+
+#menu a:hover,
+#menu a:active {
+	color:#00460F;
+}
+
+#logo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: -170px 0 0 -80px;
+}
+
+#tagline {
+    border-top: 1px solid #00460F;
+    border-bottom: 1px solid #00460F;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#tagline h1 {
+	font-family: 'Orbitron';
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #00460F;
+    white-space: nowrap;
+	margin: 0;
+	padding:5px 0;
+}
+
+#no-web3 {
+	position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	display:none;
+}
+#no-web3 p  {
+	text-align:center;
+}
+
+#enter {
+	position: absolute;
+   	top: 60%;
+  	left: 50%;
+   	transform: translate(-50%, -50%);
+	display:none;
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+.button{
+	display: inline-block;
+	width: 100px;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform:uppercase;
+	background: #00460F;
+  background-image: -webkit-linear-gradient(top, #00460F, #156824);
+  background-image: -moz-linear-gradient(top, #00460F, #156824);
+  background-image: -ms-linear-gradient(top, #00460F, #156824);
+  background-image: -o-linear-gradient(top, #00460F, #156824);
+  background-image: linear-gradient(to bottom, #00460F, #156824);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+}
+
+.button a {
+	color:#fff;
+	text-decoration:none;
+}
+.button:hover {
+  background: #156824;
+  background-image: -webkit-linear-gradient(top, #156824, #00460F);
+  background-image: -moz-linear-gradient(top, #156824, #00460F);
+  background-image: -ms-linear-gradient(top, #156824, #00460F);
+  background-image: -o-linear-gradient(top, #156824, #00460F);
+  background-image: linear-gradient(to bottom, #156824, #00460F);
+  text-decoration: none;
+
+}
+@keyframes pulse_animation {
+	0% { transform: scale(1); }
+	10% { transform: scale(1.08); }
+	20% { transform: scale(1); }
+	30% { transform: scale(1.08); }
+	40% { transform: scale(1); }
+	50% { transform: scale(1.08); }
+	60% { transform: scale(1); }
+	70% { transform: scale(1.08); }
+	80% { transform: scale(1); }
+	90% { transform: scale(1.08); }
+	100% { transform: scale(1); }
+}
+.pulse {
+	animation-name: pulse_animation;
+	animation-duration: 5000ms;
+	transform-origin:70% 70%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+}
+
+.pulse:hover {
+	animation-play-state:paused;
+-webkit-animation-play-state:paused; /* Safari and Chrome */
+
+}
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events:all;
+}
+#social  {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+#social a:link,
+#social a:visited  {
+	color:#fff;
+}
+.icon {
+	position:relative;
+	text-align:center;
+	width:0px;
+	height:0px;
+	padding:20px;
+	border-top-right-radius: 	20px;
+	border-top-left-radius: 	20px;
+	border-bottom-right-radius: 20px;
+	border-bottom-left-radius: 	20px;
+	-moz-border-radius: 		20px 20px 20px 20px;
+	-webkit-border-radius: 		20px 20px 20px 20px;
+	-khtml-border-radius: 		20px 20px 20px 20px;
+	color:#FFFFFF;
+}
+.icon i {
+	font-size:20px;
+	position:absolute;
+	left:9px;
+	top:10px;
+}
+.icon.social {
+	float:left;
+	margin:0 5px 0 0;
+	cursor:pointer;
+	background:#CCC ;
+	color:#fff;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+}
+.icon.social:hover {
+	background:#00460F;
+	color:#fff;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	-webkit-filter:	drop-shadow(0 1px 5px rgba(0,70,15,.8));
+	-moz-filter: 	drop-shadow(0 1px 5px rgba(0,70,15,.8));
+	-ms-filter: 		drop-shadow(0 1px 5px rgba(0,70,15,.8));
+	-o-filter: 		drop-shadow(0 1px 5px rgba(0,70,15,.8));
+	filter: 			drop-shadow(0 1px 5px rgba(0,70,15,.8));
+
+
+}
+.icon.social.fb i {
+	left:13px;
+	top:10px;
+}
+.icon.social.tw i {
+	left:11px;
+}
+.icon.social.vm i {
+	left:11px;
+}
+.icon.social.sl i {
+	left:11px;
+}
+.icon.social.tr i {
+	left:11px;
+}
+.icon.social.gh i {
+	left:11px;
+}
+.icon.social.rd i {
+	left:11px;
+}
+.inactive  {
+   pointer-events: none;
+   cursor: default;
+}
