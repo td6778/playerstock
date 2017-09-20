@@ -161,42 +161,87 @@ hr {
 	background-color: #00460F;
 	color: #fff;
     margin-top: 25px;
-    padding: 10px;
+    padding: 20px;
+}
 
-
+.filter-1 input {
+  height: 21px;
+  font-size: 80%;
+  padding: 2px;
 }
 .filter-style-btn{
     left: 25px;
     position: relative;
 }
-.filter-style-btn button {
-    padding: 4px !important;
 
+ul.dropdown-menu.filter-menu {
+    padding: 5px;
 }
-.filter-style-dropdown .dropdown-item {
-    margin-top: 5px;
-}
-.
-.dropdown-item.active, .dropdown-item:active {
-    color: #fff;
-    text-decoration: none;
-    background-color: #fff !important;
-}
-.filter-style-dropdown {
-    min-width: 120px !important;
-}
-
-.filter-style-dropdown input[type="checkbox"] {
+.filter-style-dropdown input {
     position: absolute;
     right: 15px;
     margin-top: 7px;
 }
+.style-filter-item {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 80%;
+}
+.style-filter-item.first{
+  padding-top: 5px;
+}
+.style-filter-item input[type="checkbox"] {
+    position: absolute;
+    right: 10px;
+    margin-top: 3px;
+}
+.filter-3 {
+  left: 55px;
+  position: relative;
+  width: 200px;
 
+}
+#entryFee-dropdown-from, #entryFee-dropdown-to {
+    display: inline-block;
+    width: 72px !important;
+    background-color: #fff;
+    color: #232323 !important;
+    width: 60px;
+}
+a.dropdown-filter {
+    padding-left: 5px;
+}
+.ps-dropdown .dropdown-filter span {
+    color: #00460F;
+    float: right;
+    cursor: pointer;
+    font-size: 16px;
+    border-left: 1px solid #e9e8ea;
+    width: 18px ;
+    padding: 3px;
+    height: 21px;
+}
+#entryFee-dropdown-to ul.dropdown-menu {
+  position: absolute;
+  left: 94px;
+}
+.dropdown-menu.filter-menu {
+  min-width: 74px !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-radius: 0 !important;
+}
+.dropdown-menu.filter-menu li {
+  border-bottom: 1px solid #E6E6E6;
+}
+.dropdown-menu.filter-menu a {
+  color: #00460F;
+  font-size: 80%;
+  font-weight: 400;
+  padding-left: 5px;
 
-
-
-
-
+}
 .contest-table thead {
     background-color: #000;
     color: #E6E6E6;
