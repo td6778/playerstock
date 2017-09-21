@@ -1,6 +1,6 @@
 body {
     background-color: #232323 !important;
-    
+
 }
 hr {
     border-top:1px solid #474648 !important;
@@ -362,8 +362,12 @@ a.dropdown-type {
     font-weight: bold;
     font-size: 75%;
 }
-.contest-entry, .contest-field, .contest-prize-header, .contest-prize {
+.contest-entry, .contest-field,  .contest-prize {
     text-align: center;
+}
+.contest-prize-header span {
+ position: relative;
+ left: 30px;
 }
 
 .table-icon, .field-of, .field-to {
@@ -400,26 +404,26 @@ a.dropdown-type {
 }
 
 
-
-.btn-enter {
-	text-align: center;
+.contest-enter {
+    background-color: #232323;
+    width: 76px;
+    padding: 5px 0px;
+    color: #fff;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom: 4px solid #000;
+    position: absolute;
+    top: -7px;
     cursor: pointer;
-	text-decoration: none;
+    text-align: center;
+    text-decoration: none;
 	text-transform:uppercase;
+}
+.btn-enter {
 	color: #fff;
-	padding:8px 12px;
-	background: #00460F;
-  background-image: -webkit-linear-gradient(top, #00460F, #156824);
-  background-image: -moz-linear-gradient(top, #00460F, #156824);
-  background-image: -ms-linear-gradient(top, #00460F, #156824);
-  background-image: -o-linear-gradient(top, #00460F, #156824);
-  background-image: linear-gradient(to bottom, #00460F, #156824);
-  -webkit-border-radius: 5;
-  -moz-border-radius: 5;
-
 }
 
-.btn-enter:hover{
+.contest-enter:hover{
   background-image: -webkit-linear-gradient(bottom, #00460F, #156824);
   background-image: -moz-linear-gradient(bottom, #00460F, #156824);
   background-image: -ms-linear-gradient(bottom, #00460F, #156824);
@@ -427,8 +431,17 @@ a.dropdown-type {
   background-image: linear-gradient(to top, #00460F, #156824);
   color: #fff;
   text-decoration: none;
+  border-bottom: 4px solid #CFB53B;
   }
 
+.contest-enter a:link,
+.contest-enter a:visited,
+.contest-enter a:hover,
+.contest-enter a:active
+{
+    color: #fff;
+    text-decoration: none !important;
+}
 .btn-enter:focus,.btn-enter:active {
    outline: none !important;
 }

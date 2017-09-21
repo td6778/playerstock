@@ -158,7 +158,7 @@
 				Entries
 			</div>
 			<div class="contest-prize-header col-2">
-				Total Prizes
+				<span>Total Prizes</span>
 			</div>
 			<div class="contest-style-header col-2">
 				Live
@@ -194,7 +194,10 @@
 	            Thu. 10/11 7:30p
 	        </div>
 	        <div class="contest-entry col-1">
-	            <a class="btn-enter" href="#">ENTER</a>
+				<div class="contest-enter">
+					<i class="fa fa-file-text" aria-hidden="true"></i>
+	            	<a class="btn-enter" href="#">ENTER</a>
+				</div>
 	        </div>
 	    </div>
 
