@@ -23,15 +23,30 @@
 		</div><!-- end card -->
 	</div><!-- end row -->
 </div><!-- end container -->
-
+<div class="container">
+	<div class="row">
+		<div class="col-3 create-menu">
+				<a href="#"><i class="fa fa-trophy brand-color2" aria-hidden="true">&nbsp;</i> Create a Contest</a>
+		</div>
+		<div class="col-3 create-menu">
+				<a href="#"><i class="fa fa-file-text brand-color2" aria-hidden="true">&nbsp;</i> Create a Lineup</a>
+		</div>
+		<div class="col-3 create-menu">
+				<a href="#"><i class="fa fa-info-circle brand-color2" aria-hidden="true">&nbsp;</i> Rules &amp; How-To</a>
+		</div>
+		<div class="col-3 create-menu end">
+				<a href="#"><i class="fa fa-user-plus brand-color2" aria-hidden="true">&nbsp;</i> Refer a Friend</a>
+		</div>
+	</div>
+</div>
 <div class="container">
 	<div class="filter row">
 		<div class="filter-1">
-			<div>Contest Name</div>
+			<div class="filter-label">Contest Name</div>
 				<input type="text"  placeholder="Search...">
 		</div>
 		<div class="filter-2 filter-style-btn">
-			<div>Contest Type</div>
+			<div  class="filter-label">Contest Type</div>
 			<div id="contestType-dropdown" class="ps-dropdown small" data-filter-type="contest" data-selected-entry-value="All">
 					<a class="dropdown-type" data-toggle="dropdown" aria-expanded="true">All<span class="fa fa-caret-down"></span></a>
 					<ul class="dropdown-menu type-menu" role="menu" aria-labelledby="contest-type-dropdown-from">
@@ -46,7 +61,7 @@
 					</div>
 		</div>
 		<div class="filter-3 filter-style-btn">
-			<div>Scoring</div>
+			<div class="filter-label">Scoring</div>
 			<div id="scoring-dropdown" class="ps-dropdown small" data-filter-type="style" data-selected-entry-value="All">
 					<a class="dropdown-filter" data-toggle="dropdown" aria-expanded="true">Style<span class="fa fa-caret-down"></span></a>
 					<ul class="dropdown-menu style-menu" role="menu" aria-labelledby="entry-fee-dropdown-from">
@@ -59,7 +74,7 @@
 		</div>
 
 		<div class="filter-4" data-filters-dropdown="entryFee">
-            <div>Entry Fee</div>
+            <div class="filter-label">Entry Fee</div>
             <div id="entryFee-dropdown-from" class="ps-dropdown small" data-filter-type="min" data-selected-entry-value="0">
                 <a class="dropdown-filter" data-toggle="dropdown" aria-expanded="true">Free<span class="fa fa-caret-down"></span></a>
                 <ul class="dropdown-menu entry-menu" role="menu" aria-labelledby="entry-fee-dropdown-from">
@@ -100,7 +115,7 @@
         </div>
 
 		<div class="filter-5" data-filters-dropdown="fieldSize">
-            <div>Field Size</div>
+            <div class="filter-label">Field Size</div>
             <div id="fieldSize-dropdown-from" class="ps-dropdown small" data-filter-type="min" data-selected-entry-value="0">
                 <a class="dropdown-field" data-toggle="dropdown" aria-expanded="true">3<span class="fa fa-caret-down"></span></a>
                 <ul class="dropdown-menu field-menu" role="menu" aria-labelledby="field-size-dropdown-from">
@@ -129,7 +144,7 @@
         </div>
 
 		<div class="filter-6">
-			<div>Experience Level</div>
+			<div class="filter-label">Experience Level</div>
 		<div>
 			<label class="checkbox-inline">
 		      <input type="checkbox" value="" checked="checked">Beginner
@@ -154,11 +169,11 @@
 			<div class="contest-entry-header col-1">
 				Entry Fee
 			</div>
-			<div class="contest-field-header col-1">
+			<div class="contest-field-header col-2">
 				Entries
 			</div>
-			<div class="contest-prize-header col-2">
-				<span>Total Prizes</span>
+			<div class="contest-prize-header col-1">
+				<span>Prizes</span>
 			</div>
 			<div class="contest-style-header col-2">
 				Live
@@ -177,21 +192,21 @@
 	            <a href="#">NFL Legends Alpha Testing Tournament 1-10112017-PS-0x0cbd23defshdffw2100120130</a>
 	        </div>
 	        <div class="contest-style col-1">
-	            <div class="dk">DK</div>
+	            <div class="dk"><a href="#">DK</a></div>
 	        </div>
 	        <div class="contest-entry col-1">
 	            $3
 	        </div>
-	        <div class="contest-field col-1">
-	            <div class="field-of">0</div>
+	        <div class="contest-field col-2">
+	            <div class="field-of">55555</div>
 	            /
-	            <div class="field-to">1000</div>
+	            <div class="field-to">Unlimited</div>
 	        </div>
-	        <div class="contest-prize col-2">
-	            $2700
+	        <div class="contest-prize col-1">
+	            <a href="#">$2700</a>
 	        </div>
-	        <div class="contest-style col-2">
-	            Thu. 10/11 7:30p
+	        <div class="contest-live col-2">
+	            <a href="#">Thu. 10/11 7:30p</a>
 	        </div>
 	        <div class="contest-entry col-1">
 				<div class="contest-enter">
