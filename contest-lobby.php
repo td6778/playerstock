@@ -211,7 +211,7 @@
 	        <div class="contest-entry col-1">
 				<div class="contest-enter">
 					<i class="fa fa-file-text" aria-hidden="true"></i>
-	            	<a class="btn-enter" href="#">ENTER</a>
+	            	<a class="btn-enter" href="contest.php?">ENTER</a>
 				</div>
 	        </div>
 	    </div>

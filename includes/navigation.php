@@ -6,7 +6,7 @@
             <img src="images/logo-sm.png" alt="" class="logo-sm" onclick="home()" />
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Lobby</a>
+        <a class="nav-link" href="contest-lobby.php">Lobby</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Contests</a>
