@@ -413,6 +413,10 @@ a.dropdown-type {
     font-weight: bold;
     font-size: 75%;
 }
+.contest-style.col-1 {
+    position: relative;
+    left: 9px;
+}
 .dk a:link, .dk a:visited,
 .dk a:hover,.dk a:active {
   color: #000;
@@ -524,13 +528,14 @@ a.dropdown-type {
   padding-left: 10px ;
   padding-right: 10px;
 }
-.draft-header {
-  background-color: #00460F;
-  padding: 10px !important;
+.draft-header, .draft-text {
+  background-color: #232323;
   color: #fff;
   font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
   font-size: 13px;
-
+}
+.draft-header {
+    padding: 20px 30px !important;
 }
 .draft-header h1 {
   color: #fff;
@@ -539,8 +544,35 @@ a.dropdown-type {
   vertical-align: middle;
   font-size: 26px;
   line-height: 28px;
-
 }
+.draft-desc p {
+    padding-left: 50px !important;
+}
+.draft-btn {
+    padding: 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+a.btn.btn-challenge {
+    background-color: #00460F;
+}
+.draft-text h2 {
+    margin: 0 0 2px 0;
+    font-size: 22px !important;
+    font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
+    line-height: 24px !important;
+    color: #fff;
+    padding: 0;
+}
+.draft-text h3   {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+    padding: 0;
+}
+
 
 /* ***************** Start Contest Draft CSS ********************** */
 #footer {
