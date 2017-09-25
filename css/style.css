@@ -27,6 +27,9 @@ hr {
 .caret{
     cursor: pointer;
 }
+.vs-20 {
+    margin-top: 20px !important;
+}
 .primary-nav {
     background-color: #00460F;
     color: #ffffff !important;
@@ -46,6 +49,9 @@ hr {
     color: #E6E6E6;
     font-weight: bold;
 }
+.nav-link {
+  color: #fff !important;
+}
 .nav-link.disabled,
 .nav-link.disabled:hover{
     color: #636c72 !important;
@@ -53,21 +59,21 @@ hr {
 }
 .primary-nav a:visited,
 .secondary-nav a:visited {
-    color: #E6E6E6;
+    color: #E6E6E6 !important;
 }
 .primary-nav a:hover {
-    color: #CFB53B;
+    color: #CFB53B !important;
 }
 .primary-nav a:active {
-    color: #CFB53B;
-    background-color: #00460F;
+    color: #CFB53B !important;
+    background-color: #00460F !important;
 }
 .secondary-nav a:hover {
-    color: #CFB53B;
+    color: #CFB53B !important;
 
 }
 .secondary-nav a.active {
-    color: #007A1B;
+    color: #007A1B !important;
 }
 .sn-li1{
     margin-left: 55px;
@@ -525,8 +531,8 @@ a.dropdown-type {
   padding-top: 10px !important;
 }
 .draft-row {
-  padding-left: 10px ;
-  padding-right: 10px;
+  padding-left: 15px ;
+  padding-right: 15px;
 }
 .draft-header, .draft-text {
   background-color: #232323;
@@ -572,8 +578,130 @@ a.btn.btn-challenge {
     color: #fff;
     padding: 0;
 }
+.social-share {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 58px;
+  padding: 10px ;
+  min-height: 142px;
+  background: #595959;
+}
+.social-share a:link,
+.social-share a:visited  {
+	color:#fff;
+}
 
+.social-share .icon.social.fb {
+  position: relative;
+  top: -5px;
+}
+.social-share .icon.social.gp {
+  position: relative;
+  top: 5px;
+}
+.all-games-row {
+  padding-left: 10px;
+}
+.game-list.styled .game-block.all {
+    float: left;
+    vertical-align: top;
+    color: white;
+    display: block;
+}
+.game-list.styled .game-block {
+    width: 120px;
+    margin: 0;
+    padding-right: 5px;
+    float: none;
+    display: inline-block;
+}
+.game-list.styled .selected .game {
+    border-color: #00460F;
+}
 
+.game-list.styled .game {
+    border: 1px solid #e1e1e1;
+    background-color: #fff;
+}
+.game-list.styled .game a.all-games, .game-list.styled .game a.all-games:link, .game-list.styled .game a.all-games:visited {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+.game-list.styled .game {
+    border: 1px solid #CFB53B;
+    background-color: #fff;
+}
+.game-list.styled .game {
+    min-height: 87px;
+    position: relative;
+    background-color: #fff;
+    padding: 10px 10px 20px 10px;
+    margin-top: 7px;
+}
+.game-block .game i.fa-info-circle, .game-block .game i.fa-info-circle:hover {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    color: #00460F;
+}
+.game-list.styled .game .footer {
+    position: absolute;
+    width: 100%;
+    line-height: 16px;
+    vertical-align: middle;
+    padding: 0 10px;
+    margin: 0;
+    height: 15px;
+    bottom: 0;
+    left: 0;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #00460F;
+    text-align: center;
+}
+.game-list.styled .game table.table.branded.headless.game {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-height: inherit;
+}
+table.table.branded.headless,
+table.table.branded.headless tbody tr,
+table.table.branded.headless tbody tr:nth-child(odd) {
+    background-color: transparent;
+}
+.game-list.styled .game table.table.branded.headless.game tbody tr td.team-names {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 13px;
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+  color: #232323;
+  border: 0;
+}
+.game-list.styled .scrolling-box {
+    padding: 0;
+    overflow: auto !important;
+}
+.game-list.styled .games-holder {
+    height: 100px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    float: left;
+}
+.col-2.game-block-all {
+    max-width: 125px;
+    padding: 0;
+}
+.scrolling-box.col-10 {
+    min-width: 985px;
+}
 /* ***************** Start Contest Draft CSS ********************** */
 #footer {
     background-color: #1a1a1a;

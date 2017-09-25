@@ -216,7 +216,7 @@
 	        </div>
 	    </div>
 
-		<?php require('includes/sample-data.php');?>
+		<?php require('includes/sample-lobby-data.php');?>
 </div>
 
 <?php require('includes/footer.php');?>
