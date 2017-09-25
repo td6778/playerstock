@@ -60,8 +60,74 @@
     </div>
   </div>
   <div class="row vs-20">
-  <div class="col-6"> Left Col</div>
-  <div class="col-6"> Right Col</div>
+  <div class="col-6">
+    <div class="row"><h3 class="table-heading">Player Pool</div>
+    <div class="row">
+      <div class="col-12">
+        <!-- **************************** Bootstrap 4 Tabs ******************* -->
+<div class="draft-contest-tabs" role="tabpanel">
+  <ul class="nav nav-tabs" id="draftTabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active draft-tabs" id="qb-tab" data-toggle="tab" href="#qb" role="tab" aria-controls="home" aria-expanded="false">QB</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#rb" role="tab" aria-controls="profile" aria-expanded="false">RB</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#wr" role="tab" aria-controls="profile" aria-expanded="false">WR</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#te" role="tab" aria-controls="profile" aria-expanded="false">TE</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#flex" role="tab" aria-controls="profile" aria-expanded="false">FLEX</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#dst" role="tab" aria-controls="profile" aria-expanded="false">DST</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#all" role="tab" aria-controls="profile" aria-expanded="false">ALL</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="draftTabContent">
+    <div role="tabpanel" class="tab-pane fade show active" id="qb" aria-labelledby="home-tab" aria-expanded="false">
+      QBs
+    </div>
+    <div class="tab-pane fade" id="rb" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
+      RBs
+    </div>
+    <div class="tab-pane fade" id="wr" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
+      WRs
+    </div>
+    <div class="tab-pane fade" id="te" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
+      TEs
+    </div>
+    <div class="tab-pane fade" id="flex" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
+      FLEXs
+    </div>
+    <div class="tab-pane fade" id="dst" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
+      DSTs
+    </div>
+    <div class="tab-pane fade" id="all" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
+      All
+    </div>
+  </div>
+</div>
+
+  <!-- **************************** Bootstrap 4 Tabs ******************* -->
+
+
+
+    </div><!-- end col-8 -->
+  </div><!-- end row 1 -->
+    <div class="row">Row 2</div>
+    <div class="row">Row 3</div>
+  </div><!-- end left col -->
+  <div class="col-6">
+    <div class="row">Row 1</div>
+    <div class="row">Row 2</div>
+    <div class="row">Row 3</div>
+  </div><!-- end right col -->
   </div>
 </div>
 

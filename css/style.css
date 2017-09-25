@@ -170,15 +170,15 @@ hr {
 .col-3.create-menu a,
 .col-3.create-menu a:visited {
     color: white !important;
-    font-weight: 500;
+    font-weight: bold;
     text-align: center;
     text-decoration: none;
 }
 
-.create-menu a:hover,
-.create-menu a:active
+.col-3.create-menu  a:hover,
+.col-3.create-menu a:active
 {
-  color: #CFB53B;
+  color: #CFB53B !important;
   text-decoration: none;
 }
 
@@ -702,7 +702,42 @@ table.table.branded.headless tbody tr:nth-child(odd) {
 .scrolling-box.col-10 {
     min-width: 985px;
 }
-/* ***************** Start Contest Draft CSS ********************** */
+.table-heading {
+  color: #222;
+  font-size: 20px;
+  font-weight: normal;
+  font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
+  text-transform: uppercase;
+  padding-left: 15px;
+}
+
+#draftTabContent {
+  border-left: 1px solid #eceeef;
+  border-right: 1px solid #eceeef;
+  border-bottom: 1px solid #eceeef;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  min-height: 498px;
+}
+#draftTabs  {
+    background-color: #00460F;
+    border-bottom: 5px solid #fbdf93;
+    font-weight: bold;
+}
+.nav-tabs .nav-link {
+  border-radius: 0 !important;
+  border: 0 !important;
+}
+#draftTabs .nav-link.active {
+  background: #fbdf93; /* Old browsers */
+  background: -moz-linear-gradient(top, #fceabb 0%, #cfb53b 50%, #cfb53b 51%, #fbdf93 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #fceabb 0%,#cfb53b 50%,#cfb53b 51%,#fbdf93 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #fceabb 0%,#cfb53b 50%,#cfb53b 51%,#fbdf93 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); /* IE6-9 */
+    color: #232323 !important;
+    border: 0;
+}
+/* ***************** End Contest Draft CSS ********************** */
 #footer {
     background-color: #1a1a1a;
     width: 100%;
