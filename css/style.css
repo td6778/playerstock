@@ -30,6 +30,12 @@ hr {
 .vs-20 {
     margin-top: 20px !important;
 }
+.bold {
+  font-weight: bold;
+}
+.numbers {
+  font-family: Georgia;
+}
 .primary-nav {
     background-color: #00460F;
     color: #ffffff !important;
@@ -526,6 +532,7 @@ a.dropdown-type {
 }
 
 /* ***************** Start Contest Draft CSS ********************** */
+/* ***************** Start Player Pool CSS ********************** */
 .draft-container {
   background-color: #fff;
   min-height: 900px;
@@ -744,10 +751,12 @@ table.table.branded.headless tbody tr:nth-child(odd) {
   right: 15px;
   top: 3px;
 }
-#draftTableHeader {
-  background-color: #ccc;
-  font-size: 0px;
-  text-transform: uppercase;
+.draftTableHeader {
+    background-color: #ccc;
+    font-size: 0px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+
 }
 .draftTableData {
   font-size: 0px;
@@ -755,6 +764,7 @@ table.table.branded.headless tbody tr:nth-child(odd) {
   border-bottom: 1px solid #ccc;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
+  min-height: 38px;
 }
 
 .dthead,
@@ -795,12 +805,47 @@ table.table.branded.headless tbody tr:nth-child(odd) {
 }
 .dt-add {
   text-align: right;
-  color: #00460F;
   cursor: pointer;
   font-size: 18px;
+  color: #008800;
 }
 
+.dt-rmv {
+  color: #FF0000;
+  display: none;
+  text-align: right;
+  padding-left: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+/* ***************** Start Player Lineup CSS ********************** */
+.draft-lineup-header {
+  margin-top: 30px;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  background-color: #232323;
+  color: #fff;
+  height: 44px;
+  padding: 10px;
+  border-bottom: 5px solid #00460f;
+  font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
+  font-size: 14px;
 
+}
+.draft-lineup-header h3 {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.avg-rem-div {
+  border-right: 1px solid #ccc;
+}
+.avg-rem {
+    font-size: 16px;
+
+}
 /* ***************** End Contest Draft CSS ********************** */
 #footer {
     background-color: #1a1a1a;

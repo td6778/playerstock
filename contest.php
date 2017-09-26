@@ -67,7 +67,7 @@
       </div>
     <div class="row">
       <div class="col-12">
-        <!-- **************************** Bootstrap 4 Tabs ******************* -->
+        <!-- **************************** Start Player Pool Tabs ******************* -->
 <div class="draft-contest-tabs" role="tabpanel">
   <ul class="nav nav-tabs" id="draftTabs" role="tablist">
     <li class="nav-item">
@@ -92,7 +92,7 @@
       <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#all" role="tab" aria-controls="profile" aria-expanded="false">ALL</a>
     </li>
   </ul>
-  <div id="draftTableHeader">
+  <div class="draftTableHeader">
     <div class="dthead dt-pos">POS</div>
     <div class="dthead dt-player">Player</div>
     <div class="dthead dt-opp">OPP</div>
@@ -134,8 +134,7 @@
     </div>
   </div>
 </div>
-
-  <!-- **************************** Bootstrap 4 Tabs ******************* -->
+      <!-- **************************** End Player Pool Tabs ******************* -->
 
 
 
@@ -145,7 +144,107 @@
     <div class="row"><!-- Row 3 --></div>
   </div><!-- end left col -->
   <div class="col-6">
-    <div class="row"><!-- Row 1 --></div>
+    <div class="row draft-lineup-header">
+      <div class="col-4"><h3>Lineup</h3></div>
+      <div class="col-4 avg-rem-div">
+        <span class="avg-rem-txt">Avg. Rem./Player:</span>
+        <span class="avg-rem neon-green bold numbers">$5,555</span>
+      </div>
+      <div class="col-4 rem-salary-div">
+        <span class="avg-rem-txt">Rem. Salary:&nbsp;</span>
+        <span class="avg-rem neon-green bold numbers">$50,000</span>
+      </div>
+    </div>
+    <div class="draftTableHeader">
+      <div class="dthead dt-pos">POS</div>
+      <div class="dthead dt-player">Player</div>
+      <div class="dthead dt-opp">OPP</div>
+      <div class="dthead dt-fppg">FPPG</div>
+      <div class="dthead dt-oprk">OPRK</div>
+      <div class="dthead dt-salary">salary</div>
+      <div class="dthead dt-add">&nbsp;</div>
+    </div>
+    <div class="draftTableData">
+      <div class="dtdata dt-pos">QB</div>
+      <div class="dtdata dt-player">J. Montana</div>
+      <div class="dtdata dt-opp">SF @ --</div>
+      <div class="dtdata dt-fppg">16.57</div>
+      <div class="dtdata dt-oprk">----</div>
+      <div class="dtdata dt-salary">$10,000</div>
+      <div style="display:inline-block;" class="dtdata dt-rmv"><i  class="fa fa-window-close" aria-hidden="true"></i></div>
+    </div>
+    <div class="draftTableData">
+      <div class="dtdata dt-pos">RB</div>
+      <div class="dtdata dt-player"></div>
+      <div class="dtdata dt-opp"></div>
+      <div class="dtdata dt-fppg"></div>
+      <div class="dtdata dt-oprk"></div>
+      <div class="dtdata dt-salary"></div>
+      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+    </div>
+    <div class="draftTableData">
+      <div class="dtdata dt-pos">RB</div>
+      <div class="dtdata dt-player"></div>
+      <div class="dtdata dt-opp"></div>
+      <div class="dtdata dt-fppg"></div>
+      <div class="dtdata dt-oprk"></div>
+      <div class="dtdata dt-salary"></div>
+      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+    </div>
+    <div class="draftTableData">
+      <div class="dtdata dt-pos">WR</div>
+      <div class="dtdata dt-player"></div>
+      <div class="dtdata dt-opp"></div>
+      <div class="dtdata dt-fppg"></div>
+      <div class="dtdata dt-oprk"></div>
+      <div class="dtdata dt-salary"></div>
+      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+    </div>
+    <div class="draftTableData">
+      <div class="dtdata dt-pos">WR</div>
+      <div class="dtdata dt-player"></div>
+      <div class="dtdata dt-opp"></div>
+      <div class="dtdata dt-fppg"></div>
+      <div class="dtdata dt-oprk"></div>
+      <div class="dtdata dt-salary"></div>
+      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+    </div>
+    <div class="draftTableData">
+      <div class="dtdata dt-pos">WR</div>
+      <div class="dtdata dt-player"></div>
+      <div class="dtdata dt-opp"></div>
+      <div class="dtdata dt-fppg"></div>
+      <div class="dtdata dt-oprk"></div>
+      <div class="dtdata dt-salary"></div>
+      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+    </div>
+    <div class="draftTableData">
+      <div class="dtdata dt-pos">TE</div>
+      <div class="dtdata dt-player"></div>
+      <div class="dtdata dt-opp"></div>
+      <div class="dtdata dt-fppg"></div>
+      <div class="dtdata dt-oprk"></div>
+      <div class="dtdata dt-salary"></div>
+      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+    </div>
+    <div class="draftTableData">
+      <div class="dtdata dt-pos">FLEX</div>
+      <div class="dtdata dt-player"></div>
+      <div class="dtdata dt-opp"></div>
+      <div class="dtdata dt-fppg"></div>
+      <div class="dtdata dt-oprk"></div>
+      <div class="dtdata dt-salary"></div>
+      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+    </div>
+    <div class="draftTableData">
+      <div class="dtdata dt-pos">DST</div>
+      <div class="dtdata dt-player"></div>
+      <div class="dtdata dt-opp"></div>
+      <div class="dtdata dt-fppg"></div>
+      <div class="dtdata dt-oprk"></div>
+      <div class="dtdata dt-salary"></div>
+      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+    </div>
     <div class="row"><!--Row 2 --></div>
     <div class="row"><!-- Row 3 --></div>
   </div><!-- end right col -->
