@@ -196,7 +196,8 @@ hr {
   font-size: 80%;
 }
 
-.filter-1 input {
+.filter-1 input,
+.draft-table-heading input {
   height: 21px;
   font-size: 80%;
   padding: 2px;
@@ -631,7 +632,7 @@ a.btn.btn-challenge {
     width: 100%;
 }
 .game-list.styled .game {
-    border: 1px solid #CFB53B;
+    border: 1px solid #bdbdbd;
     background-color: #fff;
 }
 .game-list.styled .game {
@@ -708,7 +709,7 @@ table.table.branded.headless tbody tr:nth-child(odd) {
   font-weight: normal;
   font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
   text-transform: uppercase;
-  padding-left: 15px;
+  padding-left: 20px;
 }
 
 #draftTabContent {
@@ -717,10 +718,11 @@ table.table.branded.headless tbody tr:nth-child(odd) {
   border-bottom: 1px solid #eceeef;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  min-height: 498px;
+  max-height: 382px;
+  overflow: auto;
 }
 #draftTabs  {
-    background-color: #00460F;
+    background-color: #232323;
     border-bottom: 5px solid #fbdf93;
     font-weight: bold;
 }
@@ -737,6 +739,68 @@ table.table.branded.headless tbody tr:nth-child(odd) {
     color: #232323 !important;
     border: 0;
 }
+.draft-table-heading input {
+  position: absolute;
+  right: 15px;
+  top: 3px;
+}
+#draftTableHeader {
+  background-color: #ccc;
+  font-size: 0px;
+  text-transform: uppercase;
+}
+.draftTableData {
+  font-size: 0px;
+  padding: 5px 0px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.dthead,
+.dtdata {
+    display: inline-block;
+
+}
+.dthead {
+  font-size: 12px;
+}
+.dtdata {
+  font-size: 14px;
+  font-weight: 600;
+}
+.dt-pos {
+  width: 45px;
+  text-align: center;
+}
+.dt-player {
+  width: 150px;
+  padding-left: 8px;
+}
+.dt-opp {
+  width: 85px;
+  text-align: center;
+}
+.dt-fppg,
+.dt-oprk {
+  width: 64px;
+  text-align: center;
+}
+.dt-salary {
+  width: 85px;
+  text-align: center;
+  position: relative;
+  right: 10px;
+
+}
+.dt-add {
+  text-align: right;
+  color: #00460F;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
 /* ***************** End Contest Draft CSS ********************** */
 #footer {
     background-color: #1a1a1a;

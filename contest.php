@@ -10,7 +10,7 @@
   </div>
   <div class="row draft-row">
       <div class="col-5 draft-text draft-desc">
-        <p>$0 IN CASH PRIZES ARE UP FOR GRABS. MULTI ENTRY FORMAT WITH A 5 ENTRY MAX PER PLAYER.</p>
+        <p>OUR FIRST ALPHA TEST TOURNAMENT! ENTRY BY INVITE ONLY, MAX 5 ENTRIES PER INVITE CODE. THIS CONTEST IS FOR TESTING ONLY, NO PRIZES WILL BE AWARDED.</p>
         <p class="draft-btn"><a class="btn btn-challenge">Challenge Friends</a></p>
       </div>
       <div class="col-4 draft-text">
@@ -61,7 +61,10 @@
   </div>
   <div class="row vs-20">
   <div class="col-6">
-    <div class="row"><h3 class="table-heading">Player Pool</div>
+    <div class="row draft-table-heading">
+        <h3 class="table-heading">Player Pool</h3>
+        <input class="draft-table-search" placeholder="Search..." type="text">
+      </div>
     <div class="row">
       <div class="col-12">
         <!-- **************************** Bootstrap 4 Tabs ******************* -->
@@ -89,9 +92,27 @@
       <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#all" role="tab" aria-controls="profile" aria-expanded="false">ALL</a>
     </li>
   </ul>
+  <div id="draftTableHeader">
+    <div class="dthead dt-pos">POS</div>
+    <div class="dthead dt-player">Player</div>
+    <div class="dthead dt-opp">OPP</div>
+    <div class="dthead dt-fppg">FPPG</div>
+    <div class="dthead dt-oprk">OPRK</div>
+    <div class="dthead dt-salary">salary</div>
+    <div class="dthead dt-add">&nbsp;</div>
+  </div>
   <div class="tab-content" id="draftTabContent">
     <div role="tabpanel" class="tab-pane fade show active" id="qb" aria-labelledby="home-tab" aria-expanded="false">
-      QBs
+      <div class="draftTableData">
+        <div class="dtdata dt-pos">QB</div>
+        <div class="dtdata dt-player">J. Montana</div>
+        <div class="dtdata dt-opp">SF @ --</div>
+        <div class="dtdata dt-fppg">16.57</div>
+        <div class="dtdata dt-oprk">----</div>
+        <div class="dtdata dt-salary">$10,000</div>
+        <div class="dtdata dt-add"><i class="fa fa-plus-square" aria-hidden="true"></i></div>
+      </div>
+      <?php require('includes/draft-table-data.php');?>
     </div>
     <div class="tab-pane fade" id="rb" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
       RBs
@@ -120,13 +141,13 @@
 
     </div><!-- end col-8 -->
   </div><!-- end row 1 -->
-    <div class="row">Row 2</div>
-    <div class="row">Row 3</div>
+    <div class="row"><!-- Row 2 --></div>
+    <div class="row"><!-- Row 3 --></div>
   </div><!-- end left col -->
   <div class="col-6">
-    <div class="row">Row 1</div>
-    <div class="row">Row 2</div>
-    <div class="row">Row 3</div>
+    <div class="row"><!-- Row 1 --></div>
+    <div class="row"><!--Row 2 --></div>
+    <div class="row"><!-- Row 3 --></div>
   </div><!-- end right col -->
   </div>
 </div>
