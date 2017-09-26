@@ -14,17 +14,17 @@
         <p class="draft-btn"><a class="btn btn-challenge">Challenge Friends</a></p>
       </div>
       <div class="col-4 draft-text">
-        <h2>GAME TIME: OCT 11 @ 7:30 PM ET </h2>
-        <h3>LIVE IN: 00:26:18</h3>
+        <h2>GAME TIME: DEC 10 @ 1:00 PM ET </h2>
+        <h3>LIVE IN: 00:00:00</h3>
       </div>
       <div class="col-3 draft-text">
-        <p>ENTRIES: 73 / 1000<br/>
+        <p>ENTRIES: 0 / 1000<br/>
           ENTRY FEE: FREE<br/>
           PRIZE PAYOUT: $0</p>
       </div>
 
     </div>
-    <div class="social-share">
+    <!-- <div class="social-share">
       <div class="icon social fb">
         <a href="#" target="_blank">
           <i aria-hidden="true" class="fa fa-facebook">&nbsp;</i>
@@ -40,7 +40,7 @@
           <i aria-hidden="true" class="fa fa-google-plus">&nbsp;</i>
         </a>
       </div>
-    </div>
+    </div> -->
     <div class="game-list styled clearfix">
       <div class="col-md-12">
         <div class="row">
@@ -140,7 +140,16 @@
 
     </div><!-- end col-8 -->
   </div><!-- end row 1 -->
-    <div class="row"><!-- Row 2 --></div>
+    <div class="row draft-table-options">
+      <div class="col-7">
+      <input type="checkbox" checked="checked" /><span class="aap-label"> Auto Advance Positions</span>
+    </div>
+      <div class="col-5 draft-table-option-links">
+        <a href="#">Glossary</a>
+        <a href="#">Scoring</a>
+        <a href="#">Export to CSV</a>
+      </div>
+    </div>
     <div class="row"><!-- Row 3 --></div>
   </div><!-- end left col -->
   <div class="col-6">
@@ -170,7 +179,7 @@
       <div class="dtdata dt-opp">SF @ --</div>
       <div class="dtdata dt-fppg">16.57</div>
       <div class="dtdata dt-oprk">----</div>
-      <div class="dtdata dt-salary">$10,000</div>
+      <div class="dtdata dt-salary">$10,500</div>
       <div style="display:inline-block;" class="dtdata dt-rmv"><i  class="fa fa-window-close" aria-hidden="true"></i></div>
     </div>
     <div class="draftTableData">
@@ -246,7 +255,18 @@
       <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
     </div>
     <div class="row"><!--Row 2 --></div>
-    <div class="row"><!-- Row 3 --></div>
+    <div class="row">
+        <div class="col-5">
+          <a href="#" class="btn btn-clear">CLEAR</a>
+          <a href="#" class="btn btn-import">IMPORT</a>
+        </div>
+        <div class="col-3">
+          <!-- middle col -->
+        </div>
+        <div class="col-4 submit-contest-btn">
+          <a href="#" class="btn btn-submit">ENTER&nbsp;&nbsp;<span id="contestFee" class="contest-fee-border">FREE</span></a>
+        </div>
+    </div>
   </div><!-- end right col -->
   </div>
 </div>

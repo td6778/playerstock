@@ -35,6 +35,8 @@ hr {
 }
 .numbers {
   font-family: Georgia;
+  position: relative;
+  top: -2px;
 }
 .primary-nav {
     background-color: #00460F;
@@ -818,6 +820,22 @@ table.table.branded.headless tbody tr:nth-child(odd) {
   cursor: pointer;
   font-size: 16px;
 }
+.draft-table-options {
+  font-size: 14px;
+}
+.draft-table-option-links {
+  display: inline;
+}
+.row.draft-table-options {
+    margin-top: 5px;
+    padding-left: 5px;
+}
+.col-5.draft-table-option-links a {
+  padding-left: 5px;
+}
+.col-5.draft-table-option-links a:hover {
+  color: #00460F;
+}
 /* ***************** Start Player Lineup CSS ********************** */
 .draft-lineup-header {
   margin-top: 30px;
@@ -845,6 +863,48 @@ table.table.branded.headless tbody tr:nth-child(odd) {
 .avg-rem {
     font-size: 16px;
 
+}
+.btn.btn-submit,
+.btn.btn-import {
+    background-color: #00460F;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
+    margin: 10px 0;
+    float: right;
+}
+.btn.btn-submit:hover,
+.btn.btn-import:hover {
+  background-color: #008800;
+}
+.btn.btn-import {
+  margin-left: 10px;
+  float: left;
+}
+.btn.btn-clear {
+  background-color: #232323;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
+  margin: 10px 0;
+  float: left;
+}
+.btn.btn-clear:hover {
+  background-color: #939393;
+}
+.btn.btn-submit:focus,
+.btn.btn-submit:active,
+.btn.btn-import:focus,
+.btn.btn-import:active,
+.btn.btn-clear:focus,
+.btn.btn-clear:active {
+  outline: none !important;
+}
+.contest-fee-border {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-left: 1px solid #ccc;
+    padding-left: 5px;
 }
 /* ***************** End Contest Draft CSS ********************** */
 #footer {
