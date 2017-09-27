@@ -107,9 +107,9 @@
         <div class="dtdata dt-pos">QB</div>
         <div class="dtdata dt-player">J. Montana</div>
         <div class="dtdata dt-opp">SF @ --</div>
-        <div class="dtdata dt-fppg">16.57</div>
+        <div class="dtdata dt-fppg">19.57</div>
         <div class="dtdata dt-oprk">----</div>
-        <div class="dtdata dt-salary">$10,000</div>
+        <div class="dtdata dt-salary">$10,500</div>
         <div class="dtdata dt-add"><i class="fa fa-plus-square" aria-hidden="true"></i></div>
       </div>
       <?php require('includes/draft-table-data.php');?>
@@ -177,7 +177,7 @@
       <div class="dtdata dt-pos">QB</div>
       <div class="dtdata dt-player">J. Montana</div>
       <div class="dtdata dt-opp">SF @ --</div>
-      <div class="dtdata dt-fppg">16.57</div>
+      <div class="dtdata dt-fppg">19.57</div>
       <div class="dtdata dt-oprk">----</div>
       <div class="dtdata dt-salary">$10,500</div>
       <div style="display:inline-block;" class="dtdata dt-rmv"><i  class="fa fa-window-close" aria-hidden="true"></i></div>
@@ -264,7 +264,7 @@
           <!-- middle col -->
         </div>
         <div class="col-4 submit-contest-btn">
-          <a href="#" class="btn btn-submit">ENTER&nbsp;&nbsp;<span id="contestFee" class="contest-fee-border">FREE</span></a>
+          <a href="mycontests.php" class="btn btn-submit">ENTER&nbsp;&nbsp;<span id="contestFee" class="contest-fee-border">FREE</span></a>
         </div>
     </div>
   </div><!-- end right col -->

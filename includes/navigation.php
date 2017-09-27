@@ -9,7 +9,7 @@
         <a class="nav-link" href="contest-lobby.php">Lobby</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contests</a>
+        <a class="nav-link" href="mycontests.php">Contests</a>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Buy/Sell/Trade</a>
