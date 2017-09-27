@@ -613,6 +613,9 @@ a.btn.btn-challenge {
 .all-games-row {
   padding-left: 10px;
 }
+.game {
+  cursor: pointer;
+}
 .game-list.styled .game-block.all {
     float: left;
     vertical-align: top;
@@ -671,6 +674,11 @@ a.btn.btn-challenge {
     text-transform: uppercase;
     color: #00460F;
     text-align: center;
+}
+
+.game .footer a:hover,
+.game .footer a:visited{
+  color: #00460F;
 }
 .game-list.styled .game table.table.branded.headless.game {
     border: 0;
@@ -831,7 +839,7 @@ table.table.branded.headless tbody tr:nth-child(odd) {
     padding-left: 5px;
 }
 .col-5.draft-table-option-links a {
-  padding-left: 5px;
+  padding-right: 4px;
 }
 .col-5.draft-table-option-links a:hover {
   color: #00460F;
@@ -856,6 +864,7 @@ table.table.branded.headless tbody tr:nth-child(odd) {
   font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
   text-transform: uppercase;
   display: inline-block;
+  margin-top: 2px;
 }
 .avg-rem-div {
   border-right: 1px solid #ccc;
@@ -890,7 +899,7 @@ table.table.branded.headless tbody tr:nth-child(odd) {
   float: left;
 }
 .btn.btn-clear:hover {
-  background-color: #939393;
+  background-color: #696969;
 }
 .btn.btn-submit:focus,
 .btn.btn-submit:active,
@@ -907,6 +916,13 @@ table.table.branded.headless tbody tr:nth-child(odd) {
     padding-left: 5px;
 }
 /* ***************** End Contest Draft CSS ********************** */
+/* ***************** Start MyContests CSS ********************** */
+.mycontest-container {
+  min-height: 900px;
+}
+
+
+/* ***************** End MyContests CSS ********************** */
 #footer {
     background-color: #1a1a1a;
     width: 100%;
