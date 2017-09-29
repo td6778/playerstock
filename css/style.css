@@ -15,10 +15,10 @@ hr {
     border-top:1px solid #474648 !important;
 }
 .brand-color {
-  color: #00460F;
+  color: #00460F !important;
 }
 .brand-color2 {
-  color: #CFB53B;
+  color: #CFB53B !important;
 }
 .neon-green {
     color: #00FF00;
@@ -1110,6 +1110,58 @@ table.table.branded.headless tbody tr:nth-child(odd) {
 
 
 /* ***************** End MyContests CSS ********************** */
+
+/* ***************** Start LiveGame CSS ********************** */
+.ul-inline {
+  width: 50% !important;
+  float: left !important;
+  margin: 0px;
+  padding: 0px;
+}
+.ul-inline li {
+  list-style-type: none !important;
+}
+.draft-desc p a {
+  color: #00ff00;
+  text-decoration: underline;
+}
+
+.ps-table {
+  width: 100%;
+}
+.ps-table thead {
+    background-color: #ccc;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+.ps-table th {
+  padding-left: 5px;
+}
+.ps-table tbody {
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    min-height: 38px;
+    line-height: 1.5;
+    color: #292b2c;
+    font-size: 14px;
+    font-weight: 600;
+}
+.ps-table td {
+  padding:5px;
+}
+.th-draft-pct,
+.td-draft-pct{
+  text-align: center;
+}
+.td-game {
+  font-size: 10px;
+}
+.td-scoring {
+  font-size: 12px;
+}
+/* ***************** End LiveGame CSS ********************** */
 #footer {
     background-color: #1a1a1a;
     width: 100%;

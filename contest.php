@@ -24,23 +24,6 @@
       </div>
 
     </div>
-    <!-- <div class="social-share">
-      <div class="icon social fb">
-        <a href="#" target="_blank">
-          <i aria-hidden="true" class="fa fa-facebook">&nbsp;</i>
-        </a>
-      </div>
-      <div class="icon social tw">
-        <a href="#" target="_blank">
-          <i aria-hidden="true" class="fa fa-twitter">&nbsp;</i>
-        </a>
-      </div>
-      <div class="icon social gp">
-        <a href="#" target="_blank">
-          <i aria-hidden="true" class="fa fa-google-plus">&nbsp;</i>
-        </a>
-      </div>
-    </div> -->
     <div class="game-list styled clearfix">
       <div class="col-md-12">
         <div class="row">

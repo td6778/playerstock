@@ -83,7 +83,7 @@
   	        </div>
             <div class="mycontest-live col-1">
                 <div class="mycontest-live-div">
-    					 	<a class="btn-live" href="#">Live
+    					 	<a class="btn-live" href="livegame.php">Live
                 <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                 </div>
     				</div>
