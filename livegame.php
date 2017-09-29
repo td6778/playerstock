@@ -45,13 +45,93 @@
   </div>
   <div class="row vs-20">
     <div class="col-3">
-        <div class="quick-view">
+        <div class="quick-view mnh-100">
           <h6>QUICK VIEW</h6>
+          <div class="quick-view-data">
+            <span class="qv-team">MyTeamName:</span><span class="qv-pts"> 275.92 pts</span>
+            <span class="qv-place">31577th</span>
+          </div>
         </div>
-        <div class="standings"><h6>STANDINGS</h6></div>
+        <div class="quick-view vs-20">
+          <div class="row">
+            <div class="col-6">
+              <h6>STANDINGS</h6>
+            </div>
+            <div class="col-6 standings-search">
+              <input type="text" placeholder="Find a rival.." />
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="ss-button">
+                <a href="#">Go To My Team(s)</a>
+                </div>
+              </div>
+              <div class="col-6 standings-search">
+                  <div class="ss-checkbox">
+                    <input type="checkbox" />
+                    <span >Show Only Mine</span>
+                  </div>
+              </div>
+              </div>
+              <div class="row standings-row">
+                <div id="fixed-thumb-size-demo" class="default-skin scrollable" tabindex="-1">
+                  <div class="scroll-bar vertical" style="height: 200px; display: block;">
+                    <div class="thumb" style="top: 150px; height: 50px;"></div>
+                  </div>
+                  <div class="viewport" style="height: 200px; width: 400px;">
+                    <div class="overview" style="top: -106px; left: 0px;">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed,
+                      lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
+                      Quisque
+                      semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed
+                      posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel
+                      tempus
+                      metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque.
+                      Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus
+                      eget
+                      nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi,
+                      in
+                      interdum massa nibh nec erat.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed,
+                      lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
+                      Quisque
+                      semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed
+                      posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel
+                      tempus
+                      metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque.
+                      Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus
+                      eget
+                      nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi,
+                      in
+                      interdum massa nibh nec erat.
+                    </div>
+                  </div>
+                  <div class="scroll-bar horizontal" style="width: 400px; display: block;">
+                    <div class="thumb" style="left: 0px; width: 60px;"></div>
+                  </div>
+                </div>
+
+                <!-- <table class="ps-table standings-table">
+                  <thead>
+                    <th class="tbl-pos">Rank</th>
+                    <th class="tbl-name">Team Name</th>
+                    <th class="tbl-fpts">FPTS</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="tbl-pos">31577th</td>
+                      <td class="tbl-name">MyTeamName</td>
+                      <td class="tbl-fpts">275.92</td>
+                    </tr>
+
+                  </tbody>
+                </table> -->
+              </div>
+        </div>
     </div>
     <div class="col-9">
-      <div class="row draft-lineup-header">
+      <div class="row ps-table-header">
         <div class="col-3"><h3>LIVE SCORING</h3></div>
         <div class="col-2">
           Team: MyTeamName
@@ -88,6 +168,13 @@
             <?php require('includes/alpha-livescoring-data.php');?>
 
           </tbody>
+          <tfoot>
+            <tr class="no-border">
+              <td colspan="4">&nbsp;</td>
+              <td class="tbl-border-bottom tbl-footer-label">TOTAL FANTASY POINTS:</td>
+              <td class="tbl-border-bottom tbl-footer-fpts">275.92</td>
+            </tr>
+          </tfoot>
         </table>
 
     </div>

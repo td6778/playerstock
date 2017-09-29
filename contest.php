@@ -136,7 +136,7 @@
     <div class="row"><!-- Row 3 --></div>
   </div><!-- end left col -->
   <div class="col-6">
-    <div class="row draft-lineup-header">
+    <div class="row ps-table-header vs-30">
       <div class="col-4"><h3>Lineup</h3></div>
       <div class="col-4 avg-rem-div">
         <span class="avg-rem-txt">Avg. Rem./Player:</span>
