@@ -1134,6 +1134,7 @@ table.table.branded.headless tbody tr:nth-child(odd) {
     font-size: 12px;
     text-transform: uppercase;
     padding-bottom: 5px;
+    border-left: 1px solid #ccc;
 }
 .ps-table th {
   padding-left: 5px;
@@ -1145,22 +1146,30 @@ table.table.branded.headless tbody tr:nth-child(odd) {
     min-height: 38px;
     line-height: 1.5;
     color: #292b2c;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
 }
 .ps-table td {
   padding:5px;
+  border-right: 1px solid #ccc;
+  border-collapse: collapse;
 }
-.th-draft-pct,
-.td-draft-pct{
+.ps-table tr {
+  border-bottom: 1px solid #ccc;
+}
+tr.even {
+  background-color: #f1f1f1;
+}
+.tbl-pos,
+.tbl-draft-pct,
+.tbl-fpts,
+.ttbl-fpts{
   text-align: center;
 }
 .td-game {
   font-size: 10px;
 }
-.td-scoring {
-  font-size: 12px;
-}
+
 /* ***************** End LiveGame CSS ********************** */
 #footer {
     background-color: #1a1a1a;

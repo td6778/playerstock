@@ -45,8 +45,10 @@
   </div>
   <div class="row vs-20">
     <div class="col-3">
-        <div class="quick-view">Quick View</div>
-        <div class="standings"><h5>STANDINGS</h5></div>
+        <div class="quick-view">
+          <h6>QUICK VIEW</h6>
+        </div>
+        <div class="standings"><h6>STANDINGS</h6></div>
     </div>
     <div class="col-9">
       <div class="row draft-lineup-header">
@@ -66,22 +68,25 @@
       </div>
         <table class="ps-table">
           <thead>
-            <th>POS</th>
-            <th>Player</th>
-            <th class="th-draft-pct">Draft %</th>
-            <th>Game</th>
-            <th>Scoring</th>
-            <th>FPTS</th>
+            <th class="tbl-pos">POS</th>
+            <th class="tbl-name">Player</th>
+            <th class="tbl-draft-pct">Draft %</th>
+            <th class="tbl-game">Game</th>
+            <th class="tbl-scoring">Scoring</th>
+            <th class="tbl-fpts">FPTS</th>
           </thead>
           <tbody>
             <tr>
-              <td>QB</td>
-              <td>Joe Montana</td>
-              <td class="td-draft-pct">25%</td>
-              <td class="td-game"><div>SF <br> All Pros</div></td>
-              <td class="td-scoring">2 PaTD, 183 PaYds, 1 RuTD, 16 RuYds</td>
-              <td>22.92</td>
+              <td class="tbl-pos">QB</td>
+              <td class="tbl-name">Joe Montana</td>
+              <td class="tbl-draft-pct td-draft-pct">25%</td>
+              <td class="tbl-game td-game"><div>SF <br> All Pros</div></td>
+              <td class="tbl-scoring td-scoring">2 PaTD, 183 PaYds, 1 RuTD, 16 RuYds</td>
+              <td class="tbl-fpts">22.92</td>
             </tr>
+
+            <?php require('includes/alpha-livescoring-data.php');?>
+
           </tbody>
         </table>
 
