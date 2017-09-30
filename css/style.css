@@ -1175,8 +1175,8 @@ tr.even {
 .quick-view {
     background-color: #232323;
 }
-.mnh-100 {
-  min-height: 100px;
+.mnh-120 {
+  min-height: 120px;
 }
 .quick-view h6 {
     width: 92%;
@@ -1196,8 +1196,16 @@ tr.even {
     margin-right: 20px;
     border-radius: 10px;
 }
-.qv-place {
-    float: right;
+.qv-team,
+.qv-pts,
+.qv-place,
+.qv-p2f {
+  display: block;
+}
+.qv-team {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .no-border {
   border: 0 !important;
@@ -1299,6 +1307,10 @@ tr.even {
 }
 .stdata.st-name {
   padding-left: 7px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
+  top: 5px;
 }
 .standings-table-container {
   overflow:auto;

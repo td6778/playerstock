@@ -45,11 +45,19 @@
   </div>
   <div class="row vs-20">
     <div class="col-3">
-        <div class="quick-view mnh-100">
+        <div class="quick-view mnh-120">
           <h6>QUICK VIEW</h6>
           <div class="quick-view-data">
-            <span class="qv-team">MyTeamName:</span><span class="qv-pts"> 275.92 pts</span>
-            <span class="qv-place">31577th</span>
+            <div class="row">
+              <div class="col-6">
+                <span class="qv-team">MyTeamNameMyTeamName</span>
+                <span class="qv-pts"> 275.92 pts</span>
+              </div>
+              <div class="col-6">
+                <span class="qv-place">31577th</span>
+                <span class="qv-p2f">59.38 to #1</span>
+              </div>
+            </div>
           </div>
         </div>
         <div class="quick-view vs-20">
@@ -85,7 +93,7 @@
               <div class="row standings-row standings-table-container">
                 <div class="standings-table-data">
                   <div class="stdata st-rank">1</div>
-                  <div class="stdata st-name">MyTeamName1</div>
+                  <div class="stdata st-name">MyTeamName1MyTeamName1</div>
                   <div class="stdata st-pmr">360</div>
                   <div class="stdata st-fpts">167.78</div>
                 </div>
