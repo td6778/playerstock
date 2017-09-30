@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
     window.web3 = new Web3(web3.currentProvider);
 	document.getElementById("no-web3").style.display = "none"
 	$("#enter").delay(2000).fadeIn(2000);
-  } else { 
+  } else {
   	 document.getElementById("no-web3").style.display = "block"
     // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
     window.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
@@ -19,7 +19,7 @@ window.addEventListener('load', function() {
 })
 
 setTimeout(function(){
-    
+
     var div = $('.border-fade');
     $({alpha:1}).animate({alpha:0}, {
         duration: 1000,
@@ -27,5 +27,5 @@ setTimeout(function(){
             div.css('border-color','rgba(0, 70, 15,'+this.alpha+')');
         }
     });
-    
+
 }, 2000);

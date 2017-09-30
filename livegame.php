@@ -75,58 +75,27 @@
               </div>
               </div>
               <div class="row standings-row">
-                <div id="fixed-thumb-size-demo" class="default-skin scrollable" tabindex="-1">
-                  <div class="scroll-bar vertical" style="height: 200px; display: block;">
-                    <div class="thumb" style="top: 150px; height: 50px;"></div>
-                  </div>
-                  <div class="viewport" style="height: 200px; width: 400px;">
-                    <div class="overview" style="top: -106px; left: 0px;">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed,
-                      lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
-                      Quisque
-                      semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed
-                      posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel
-                      tempus
-                      metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque.
-                      Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus
-                      eget
-                      nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi,
-                      in
-                      interdum massa nibh nec erat.
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a, scelerisque sed,
-                      lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam.
-                      Quisque
-                      semper justo at risus. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed
-                      posuere libero dui id orci. Nam congue, pede vitae dapibus aliquet, elit magna vulputate arcu, vel
-                      tempus
-                      metus leo non est. Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque.
-                      Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus
-                      eget
-                      nisi. Praesent sodales velit quis augue. Cras suscipit, urna at aliquam rhoncus, urna quam viverra nisi,
-                      in
-                      interdum massa nibh nec erat.
-                    </div>
-                  </div>
-                  <div class="scroll-bar horizontal" style="width: 400px; display: block;">
-                    <div class="thumb" style="left: 0px; width: 60px;"></div>
-                  </div>
+                <div class="psTableHeader standings-table">
+                  <div class="pshead st-rank">RANK</div>
+                  <div class="pshead st-name">TEAM NAME</div>
+                  <div class="pshead st-pmr">PMR</div>
+                  <div class="pshead st-fpts">FPTS</div>
                 </div>
-
-                <!-- <table class="ps-table standings-table">
-                  <thead>
-                    <th class="tbl-pos">Rank</th>
-                    <th class="tbl-name">Team Name</th>
-                    <th class="tbl-fpts">FPTS</th>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="tbl-pos">31577th</td>
-                      <td class="tbl-name">MyTeamName</td>
-                      <td class="tbl-fpts">275.92</td>
-                    </tr>
-
-                  </tbody>
-                </table> -->
+              </div>
+              <div class="row standings-row standings-table-container">
+                <div class="standings-table-data">
+                  <div class="stdata st-rank">1</div>
+                  <div class="stdata st-name">MyTeamName1</div>
+                  <div class="stdata st-pmr">360</div>
+                  <div class="stdata st-fpts">167.78</div>
+                </div>
+                <div class="standings-table-data even">
+                  <div class="stdata st-rank">1</div>
+                  <div class="stdata st-name">MyTeamName1</div>
+                  <div class="stdata st-pmr">360</div>
+                  <div class="stdata st-fpts">167.78</div>
+                </div>
+                <?php require('includes/alpha-standings-data.php');?>
               </div>
         </div>
     </div>

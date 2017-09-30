@@ -808,7 +808,7 @@ table.table.branded.headless tbody tr:nth-child(odd) {
   right: 15px;
   top: 3px;
 }
-.draftTableHeader {
+.psTableHeader {
     background-color: #ccc;
     font-size: 0px;
     text-transform: uppercase;
@@ -824,12 +824,13 @@ table.table.branded.headless tbody tr:nth-child(odd) {
   min-height: 38px;
 }
 
-.dthead,
-.dtdata {
+.pshead,
+.dtdata,
+.stdata {
     display: inline-block;
 
 }
-.dthead {
+.pshead {
   font-size: 12px;
 }
 .dtdata {
@@ -1246,8 +1247,8 @@ tr.even {
   text-decoration: none;
 }
 .ss-checkbox input {
-  width: 20px;
-  margin: 5px 0px 0px;
+  max-width: 10px;
+  margin: 5px 5px 0px 0px;
 }
 .ss-checkbox {
   font-size: 10px;
@@ -1256,20 +1257,55 @@ tr.even {
 }
 .ss-checkbox span {
   position: absolute;
-  top: 6px;
+  top: 8px;
 }
-.standings-table {
-  width: 90%;
+.standings-table,
+.standings-table-data {
+  width: 255px;
   margin: auto;
+  padding: 2px 4px;
 }
-.standings-table tbody {
+.st-rank,
+.st-name,
+.st-pmr,
+.st-fpts {
   font-size: 10px;
+}
+.st-rank {
+  width: 30px;
+}
+.st-name {
+  padding-left: 4px;
+  width: 100px;
+}
+.st-pmr,
+.st-fpts {
+  width: 50px;
+}
+.standings-table-data {
+  font-size: 0px;
+  padding: 5px 0px;
+  border-bottom: 1px solid #1a1a1a;
+  border-left: 1px solid #1a1a1a;
+  border-right: 1px solid #1a1a1a;
+}
+.standings-table-data.even {
+  background-color: #000;
+}
+.stdata {
   color: #CFB53B;
+  padding: 2px 4px;
+  font-weight: bold;
 }
-.standings-table-row {
-  max-height: 200px;
+.stdata.st-name {
+  padding-left: 7px;
 }
-
+.standings-table-container {
+  overflow:auto;
+  max-height: 240px;
+  max-width: 255px;
+  margin: 0px !important;
+}
 /* ***************** End LiveGame CSS ********************** */
 #footer {
     background-color: #1a1a1a;

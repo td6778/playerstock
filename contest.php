@@ -75,14 +75,14 @@
       <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#all" role="tab" aria-controls="profile" aria-expanded="false">ALL</a>
     </li>
   </ul>
-  <div class="draftTableHeader">
-    <div class="dthead dt-pos">POS</div>
-    <div class="dthead dt-player">Player</div>
-    <div class="dthead dt-opp">OPP</div>
-    <div class="dthead dt-fppg">FPPG</div>
-    <div class="dthead dt-oprk">OPRK</div>
-    <div class="dthead dt-salary">salary</div>
-    <div class="dthead dt-add">&nbsp;</div>
+  <div class="psTableHeader">
+    <div class="pshead dt-pos">POS</div>
+    <div class="pshead dt-player">Player</div>
+    <div class="pshead dt-opp">OPP</div>
+    <div class="pshead dt-fppg">FPPG</div>
+    <div class="pshead dt-oprk">OPRK</div>
+    <div class="pshead dt-salary">salary</div>
+    <div class="pshead dt-add">&nbsp;</div>
   </div>
   <div class="tab-content" id="draftTabContent">
     <div role="tabpanel" class="tab-pane fade show active" id="qb" aria-labelledby="home-tab" aria-expanded="false">
@@ -147,14 +147,14 @@
         <span class="avg-rem neon-green bold numbers">$50,000</span>
       </div>
     </div>
-    <div class="draftTableHeader">
-      <div class="dthead dt-pos">POS</div>
-      <div class="dthead dt-player">Player</div>
-      <div class="dthead dt-opp">OPP</div>
-      <div class="dthead dt-fppg">FPPG</div>
-      <div class="dthead dt-oprk">OPRK</div>
-      <div class="dthead dt-salary">salary</div>
-      <div class="dthead dt-add">&nbsp;</div>
+    <div class="psTableHeader">
+      <div class="pshead dt-pos">POS</div>
+      <div class="pshead dt-player">Player</div>
+      <div class="pshead dt-opp">OPP</div>
+      <div class="pshead dt-fppg">FPPG</div>
+      <div class="pshead dt-oprk">OPRK</div>
+      <div class="pshead dt-salary">salary</div>
+      <div class="pshead dt-add">&nbsp;</div>
     </div>
     <div class="draftTableData">
       <div class="dtdata dt-pos">QB</div>
