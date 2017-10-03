@@ -460,9 +460,9 @@ a.dropdown-type {
 .contest-live a:hover {
     color: #00460F;
 }
-.contest-style.col-1 .dk,
+.contest-style.col-1 .DK,
 .contest-style.col-1 .fd,
-.contest-style.col-1 .fdr {
+.contest-style.col-1 .FDr {
     width: 30px;
     text-align: center;
     font-weight: bold;
@@ -472,17 +472,17 @@ a.dropdown-type {
     position: relative;
     left: 9px;
 }
-.dk a:link, .dk a:visited,
-.dk a:hover,.dk a:active {
+.DK a:link, .DK a:visited,
+.DK a:hover,.DK a:active {
   color: #000;
   text-decoration: none;
 }
-.fd a:link, .fd a:visited,
-.fd a:hover,.fd a:active {
+.FD a:link, .FD a:visited,
+.FD a:hover,.FD a:active {
   color: #fff;
 }
-.fdr a:link, .fdr a:visited,
-.fdr a:hover,.fdr a:active {
+.FDr a:link, .FDr a:visited,
+.FDr a:hover,.FDr a:active {
   color: #2cccf4;
 }
 .contest-entry, .contest-field,
@@ -509,21 +509,21 @@ a.dropdown-type {
     background-color: #fff;
 
 }
-.dk {
+.DK {
     color: #000;
     border: 2px solid #98e400;
     padding:2px 6px;
     background-color: #ff8900;
 
 }
-.fd {
+.FD {
     color: #fff;
     border: 2px solid #2c4d75;
     padding:2px 6px;
     background-color: #1493ff;
 }
 
-.fdr {
+.FDr {
     color: #2cccf4;
     border: 2px solid #2cccf4;
     padding:2px 4px;
@@ -1173,7 +1173,7 @@ tr.even {
   font-size: 10px;
 }
 .quick-view {
-    background-color: #232323;
+    background-color: #000;
 }
 .mnh-120 {
   min-height: 120px;
@@ -1188,10 +1188,10 @@ tr.even {
     font-size: 18px;
 }
 .quick-view-data {
-    background-color: #000;
+    background-color: #232323;
     padding: 10px;
     font-size: 12px;
-    color: #CFB53B;
+    color: #fff;
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 10px;
@@ -1298,10 +1298,10 @@ tr.even {
   border-right: 1px solid #1a1a1a;
 }
 .standings-table-data.even {
-  background-color: #000;
+  background-color: #232323;
 }
 .stdata {
-  color: #CFB53B;
+  color: #fff;
   padding: 2px 4px;
   font-weight: bold;
 }

@@ -1,3 +1,4 @@
+<?php require('includes/dbconnection.php');?>
 <?php require('includes/header.php');?>
 <?php require('includes/navigation.php');?>
 <?php require('includes/error-reporting.php');?>
@@ -66,9 +67,9 @@
 					<a class="dropdown-filter" data-toggle="dropdown" aria-expanded="true">Style<span class="fa fa-caret-down"></span></a>
 					<ul class="dropdown-menu style-menu" role="menu" aria-labelledby="entry-fee-dropdown-from">
 							<li><div class="style-filter-item first"><div class="all">ALL<input type="checkbox" checked="checked" /></div> </div></li>
-							<li><div class="style-filter-item"><div class="dk">DK<input type="checkbox" /> </div> </div></li>
-							<li><div class="style-filter-item"><div class="fd">FD<input type="checkbox" /></div> </div></li>
-							<li><div class="style-filter-item"><div class="fdr">FDr<input type="checkbox" /></div> </div></li>
+							<li><div class="style-filter-item"><div class="DK">DK<input type="checkbox" /> </div> </div></li>
+							<li><div class="style-filter-item"><div class="FD">FD<input type="checkbox" /></div> </div></li>
+							<li><div class="style-filter-item"><div class="FDr">FDr<input type="checkbox" /></div> </div></li>
 						</ul>
 					</div>
 		</div>
@@ -184,7 +185,7 @@
 		</div>
 </div>
 <div class="container lobby-table">
-	<div class="row table-row">
+	<!--<div class="row table-row">
 	        <div class="contest-name col-4">
 	            <div class="table-icon">
 	                <i class="ion-ios-americanfootball">&nbsp;</i>
@@ -214,9 +215,52 @@
 	            	<a class="btn-enter" href="contest.php?">ENTER</a>
 				</div>
 	        </div>
-	    </div>
+	    </div> -->
 
-		<?php require('includes/sample-lobby-data.php');?>
+		<?php $sql = "SELECT * FROM contests";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+				$newdate = date("d-m-Y", strtotime($row["contest_date_start"]));
+        echo "<div class=\"row table-row\">
+				  <div class=\"contest-name col-4\">
+				    <div class=\"table-icon\">
+				      <i class=\"" . $row["iconID"] . "\">&nbsp;</i>
+				    </div>
+				    <a href=\"#\">" . $row["contest_name"] . "</a>
+				  </div>
+				  <div class=\"contest-style col-1\">
+				    <div class=\"" . $row["styleID"] . "\"><a href=\"#\">" . $row["styleID"] . "</a></div>
+				  </div>
+				  <div class=\"contest-entry col-1\">" . "$"
+				   . $row["entry_fee"] . "
+				  </div>
+				  <div class=\"contest-field col-2\">
+				    <div class=\"field-of\">" . $row["entries"] . "</div>
+				    /
+				    <div class=\"field-to\">" . $row["entry_limit"] . "</div>
+				  </div>
+				  <div class=\"contest-prize col-1\">
+				    <a href=\"#\">" . "$" . $row["prize_total"] . "</a>
+				  </div>
+				  <div class=\"contest-live col-2\">
+				    <a href=\"#\">" . $newdate . "</a>
+				  </div>
+				  <div class=\"contest-entry col-1\">
+				    <div class=\"contest-enter\">
+				      <a class=\"btn-enter\" href=\"contest.php?" . $row["contestID"] . "\">ENTER</a>
+				    </div>
+				  </div>
+				</div>";
+    }
+} else {
+    echo "0 results";
+}
+
+mysqli_close($conn);
+?>
 </div>
 
 <?php require('includes/footer.php');?>

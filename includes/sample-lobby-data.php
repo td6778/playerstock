@@ -28,6 +28,8 @@
     </div>
   </div>
 </div>
+
+
 <div class="row table-row">
   <div class="contest-name col-4">
     <div class="table-icon">
