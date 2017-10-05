@@ -1,0 +1,33 @@
+dstID,dst_city,dst_team,dst_abbrv,dst_year,dst_fppg,dst_salary
+1,Chicago ,Bears,CHI,1985,17.19,6000
+2,Cleveland,Browns,CLE,1950,16.5,5700
+3,Minnesota,Vikings,MIN,1969,16.13,5600
+4,Kansas City,Chiefs,KC,1969,16.06,5600
+5,Atlanta ,Falcons,ATL,1977,15.56,5400
+6,Green Bay,Packers,GB,1962,15.13,5200
+7,Pittsburgh,Steelers,PIT,1976,14.44,5000
+8,Los Angeles,Rams,LAR,1973,14.44,5000
+9,Indianapolis,Colts,IND,1968,14.19,4900
+10,Baltimore,Ravens,BAL,2000,13.81,4800
+11,Houston,Oilers,HOU,1993,13.63,4700
+12,Tampa Bay,Buccaneers,TB,2002,13.44,4600
+13,Philadelphia,Eagles,PHI,1991,13.38,4600
+14,Washington,Redskins,WAS,1991,13.38,4600
+15,Jacksonville,Jaguars,JAX,1999,13.19,4500
+16,Tennesee,Titans,TEN,2000,13.19,4500
+17,Miami,Dolphins,MIA,1972,12.81,4400
+18,Seattle ,Seahawks,SEA,2013,12.31,4300
+19,New York,Giants,NYG,1986,12.06,4200
+20,New Orleans,Saints,NO,1987,11.94,4100
+21,New York,Jets,NYJ,1968,11.94,4100
+22,Oakland,Raiders,OAK,1975,11.69,4000
+23,Buffalo,Bills,BUF,1990,11.63,4000
+24,New England,Patriots,NE,2004,11.38,3900
+25,Dallas,Cowboys,DAL,1994,11.06,3800
+26,San Diego,Chargers,SD,1994,11,3800
+27,Denver ,Broncos,DEN,2015,10.94,3700
+28,Carolina,Panthers,CAR,2015,10.75,3700
+29,Detroit,Lions,DET,1991,10,3500
+30,San Francisco,49ers,SF,1988,9.75,3400
+31,Cincinatti,Bengals,CIN,1988,9.25,3200
+32,Arizona,Cardinals,AZ,2008,8.06,2800

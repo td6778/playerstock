@@ -217,22 +217,22 @@
 	        </div>
 	    </div> -->
 
-		<?php $sql = "SELECT * FROM contests";
+		<?php $sql = "SELECT * FROM contests c LEFT JOIN icons i ON c.iconID = i.iconID LEFT JOIN styles s ON c.styleID = s.styleID  ";
 $result = mysqli_query($conn, $sql);
-
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-				$newdate = date("d-m-Y", strtotime($row["contest_date_start"]));
+
+				$newdate = date("m-d-Y", strtotime($row["contest_date_start"]));
         echo "<div class=\"row table-row\">
 				  <div class=\"contest-name col-4\">
 				    <div class=\"table-icon\">
-				      <i class=\"" . $row["iconID"] . "\">&nbsp;</i>
+				      <i class=\"" . $row["icon_html"] . "\">&nbsp;</i>
 				    </div>
 				    <a href=\"#\">" . $row["contest_name"] . "</a>
 				  </div>
 				  <div class=\"contest-style col-1\">
-				    <div class=\"" . $row["styleID"] . "\"><a href=\"#\">" . $row["styleID"] . "</a></div>
+				    <div class=\"" . $row["style_name"] . "\"><a href=\"#\">" . $row["style_name"] . "</a></div>
 				  </div>
 				  <div class=\"contest-entry col-1\">" . "$"
 				   . $row["entry_fee"] . "
@@ -248,12 +248,20 @@ if (mysqli_num_rows($result) > 0) {
 				  <div class=\"contest-live col-2\">
 				    <a href=\"#\">" . $newdate . "</a>
 				  </div>
-				  <div class=\"contest-entry col-1\">
-				    <div class=\"contest-enter\">
-				      <a class=\"btn-enter\" href=\"contest.php?" . $row["contestID"] . "\">ENTER</a>
-				    </div>
-				  </div>
-				</div>";
+				  <div class=\"contest-entry col-1\">";
+
+								if ($row["contest_status"] == 2) {
+									echo "<div class=\"contest-full\"><a class=\"btn-enter disabled\" href=\"#\">Full</a>
+									</div>
+								</div>
+							</div>";
+						} else {
+							echo "<div class=\"contest-enter\"><a class=\"btn-enter\" href=\"contest.php?" . $row["contestID"] . "\">ENTER</a>
+							</div>
+						</div>
+					</div>";
+						}
+
     }
 } else {
     echo "0 results";

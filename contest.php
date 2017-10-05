@@ -1,3 +1,4 @@
+<?php require('includes/dbconnection.php');?>
 <?php require('includes/header.php');?>
 <?php require('includes/navigation.php');?>
 <?php require('includes/error-reporting.php');?>
@@ -36,7 +37,33 @@
         </div>
           <div class="scrolling-box col-10">
             <div class="games-holder">
-              <?php require('includes/alpha-testing-teams.php');?>
+              <?php $sql = "SELECT * FROM teams";
+          $result = mysqli_query($conn, $sql);
+          if (mysqli_num_rows($result) > 0) {
+              // output data of each row
+              while($row = mysqli_fetch_assoc($result)) {
+                echo "<div class=\"game-block\">
+                  <div class=\"game\"><div class=\"information\">
+                    <i class=\"fa fa-info-circle\"></i>
+                    <table class=\"table branded headless game\">
+                      <tbody>
+                        <tr>
+                          <td class=\"team-names\">" . $row["team_name"] . "</td>
+                        </tr>
+                        <tr>
+                          <td class=\"team-names\">All-Pros</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class=\"footer\"><a href=\"#\">Depth Charts &nbsp;</a></div>
+                </div>
+                </div>";
+              }
+          } else {
+              echo "0 results";
+          }
+              ?>
           </div>
         </div>
       </div>
@@ -85,17 +112,28 @@
     <div class="pshead dt-add">&nbsp;</div>
   </div>
   <div class="tab-content" id="draftTabContent">
-    <div role="tabpanel" class="tab-pane fade show active" id="qb" aria-labelledby="home-tab" aria-expanded="false">
-      <div class="draftTableData">
-        <div class="dtdata dt-pos">QB</div>
-        <div class="dtdata dt-player">J. Montana</div>
-        <div class="dtdata dt-opp">SF @ --</div>
-        <div class="dtdata dt-fppg">19.57</div>
-        <div class="dtdata dt-oprk">----</div>
-        <div class="dtdata dt-salary">$10,500</div>
-        <div class="dtdata dt-add"><i class="fa fa-plus-square" aria-hidden="true"></i></div>
-      </div>
-      <?php require('includes/draft-table-data.php');?>
+  <div role="tabpanel" class="tab-pane fade show active" id="qb" aria-labelledby="home-tab" aria-expanded="false">
+
+      <?php $sql = "SELECT * FROM legends_player l LEFT JOIN teams t ON l.teamID = t.teamID  WHERE posID = 1 ORDER BY salary DESC";
+  $result = mysqli_query($conn, $sql);
+  if (mysqli_num_rows($result) > 0) {
+      // output data of each row
+      while($row = mysqli_fetch_assoc($result)) {
+        $salary = number_format($row["salary"]);
+        echo "<div class=\"draftTableData\">
+          <div class=\"dtdata dt-pos\">QB</div>
+          <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+          <div class=\"dtdata dt-opp\">" . $row["abbrv"] . " @ --</div>
+          <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
+          <div class=\"dtdata dt-oprk\">----</div>
+          <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
+          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+        </div>";
+      }
+  } else {
+      echo "0 results";
+  }
+      ?>
     </div>
     <div class="tab-pane fade" id="rb" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
       RBs
@@ -110,7 +148,26 @@
       FLEXs
     </div>
     <div class="tab-pane fade" id="dst" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
-      DSTs
+      <?php $sql = "SELECT * FROM legends_dst";
+  $result = mysqli_query($conn, $sql);
+  if (mysqli_num_rows($result) > 0) {
+      // output data of each row
+      while($row = mysqli_fetch_assoc($result)) {
+        $salary = number_format($row["dst_salary"]);
+        echo "<div class=\"draftTableData\">
+          <div class=\"dtdata dt-pos\">DST</div>
+          <div class=\"dtdata dt-player\">" . $row["dst_year"] . " " . $row["dst_team"] ."</div>
+          <div class=\"dtdata dt-opp\">" . $row["dst_abbrv"] . " @ --</div>
+          <div class=\"dtdata dt-fppg\">" . $row["dst_fppg"] . "</div>
+          <div class=\"dtdata dt-oprk\">----</div>
+          <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
+          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+        </div>";
+      }
+  } else {
+      echo "0 results";
+  }
+      ?>
     </div>
     <div class="tab-pane fade" id="all" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
       All

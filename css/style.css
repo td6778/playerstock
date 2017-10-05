@@ -455,13 +455,20 @@ a.dropdown-type {
 .table-icon {
   padding-right: 5px;
 }
+
+.contest-name a:visited,
 .contest-name a:hover,
+.contest-name a:active,
+.contest-prize a:visited,
+.contest-prize a:active,
 .contest-prize a:hover,
+.contest-live a:visited,
+.contest-live a:active,
 .contest-live a:hover {
     color: #00460F;
 }
 .contest-style.col-1 .DK,
-.contest-style.col-1 .fd,
+.contest-style.col-1 .FD,
 .contest-style.col-1 .FDr {
     width: 30px;
     text-align: center;
@@ -480,10 +487,12 @@ a.dropdown-type {
 .FD a:link, .FD a:visited,
 .FD a:hover,.FD a:active {
   color: #fff;
+  text-decoration: none;
 }
 .FDr a:link, .FDr a:visited,
 .FDr a:hover,.FDr a:active {
   color: #2cccf4;
+  text-decoration: none;
 }
 .contest-entry, .contest-field,
 .contest-field-header,.contest-prize {
@@ -531,7 +540,8 @@ a.dropdown-type {
 }
 
 
-.contest-enter {
+.contest-enter,
+.contest-full {
     background-color: #232323;
     width: 76px;
     padding: 5px 0px;
@@ -545,9 +555,6 @@ a.dropdown-type {
     text-align: center;
     text-decoration: none;
 	text-transform:uppercase;
-}
-.btn-enter {
-	color: #fff;
 }
 
 .contest-enter:hover{
@@ -568,6 +575,16 @@ a.dropdown-type {
 {
     color: #fff;
     text-decoration: none !important;
+}
+.contest-full a:link,
+.contest-full a:visited,
+.contest-full a:hover,
+.contest-full:hover,
+.contest-full a:active
+{
+    color: #696969;
+    text-decoration: none !important;
+    cursor: not-allowed;
 }
 .btn-enter:focus,.btn-enter:active {
    outline: none !important;
