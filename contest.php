@@ -114,7 +114,7 @@
   <div class="tab-content" id="draftTabContent">
   <div role="tabpanel" class="tab-pane fade show active" id="qb" aria-labelledby="home-tab" aria-expanded="false">
 
-      <?php $sql = "SELECT * FROM legends_player l LEFT JOIN teams t ON l.teamID = t.teamID  WHERE posID = 1 ORDER BY salary DESC";
+      <?php $sql = "SELECT * FROM legends_player l LEFT JOIN teams t ON l.teamID = t.teamID  WHERE posID = 1 ORDER BY salary DESC, fppg DESC";
   $result = mysqli_query($conn, $sql);
   if (mysqli_num_rows($result) > 0) {
       // output data of each row
@@ -136,7 +136,26 @@
       ?>
     </div>
     <div class="tab-pane fade" id="rb" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
-      RBs
+      <?php $sql = "SELECT * FROM legends_player l LEFT JOIN teams t ON l.teamID = t.teamID  WHERE posID = 2 ORDER BY salary DESC, fppg DESC";
+  $result = mysqli_query($conn, $sql);
+  if (mysqli_num_rows($result) > 0) {
+      // output data of each row
+      while($row = mysqli_fetch_assoc($result)) {
+        $salary = number_format($row["salary"]);
+        echo "<div class=\"draftTableData\">
+          <div class=\"dtdata dt-pos\">RB</div>
+          <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+          <div class=\"dtdata dt-opp\">" . $row["abbrv"] . " @ --</div>
+          <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
+          <div class=\"dtdata dt-oprk\">----</div>
+          <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
+          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+        </div>";
+      }
+  } else {
+      echo "0 results";
+  }
+      ?>
     </div>
     <div class="tab-pane fade" id="wr" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
       WRs

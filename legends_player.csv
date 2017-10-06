@@ -1,5 +1,5 @@
 playerID,teamID,posID,player_first,player_last,jersey,fppg,salary
-1,1,1,Jake,Plummer,16,13.80,4800
+1,1,1,Jake,Plummer,16,13.8,4800
 2,2,1,Jim ,McMahon,9,13.85,4900
 3,3,1,Brett,Favre,4,16.58,5800
 4,4,1,Phil,Simms,11,14.38,5000
@@ -21,13 +21,77 @@ playerID,teamID,posID,player_first,player_last,jersey,fppg,salary
 20,20,1,Steve,McNair,9,15.93,5600
 21,21,1,Jim,Kelly,12,15.22,5300
 22,22,1,Fran,Tarkenton,10,13.86,4900
-23,23,1,Michael,Vick,7,16.70,5800
+23,23,1,Michael,Vick,7,16.7,5800
 24,24,1,Dan,Marino,13,17.39,6100
 25,25,1,Aaron,Brooks,2,17.25,6000
 26,26,1,Boomer,Esiason,7,19.55,6800
 27,27,1,Dave,Krieg,17,17.87,6300
 28,28,1,Vinny,Testaverde,14,13.52,4700
 29,29,1,Jake,Delhomme,17,13.58,4800
-30,30,1,Mark,Brunell,8,14.70,5100
+30,30,1,Mark,Brunell,8,14.7,5100
 31,31,1,Kyle,Boller,7,13.01,4600
 32,32,1,Warren,Moon,1,16.48,5800
+33,1,2,Ottis,Anderson,32,23.3,8200
+34,1,2,Beanie,Wells,26,12.36,4300
+35,2,2,Walter,Payton,34,24.88,8700
+36,2,2,Gale,Sayers,40,21.38,7500
+37,3,2,Edgar,Bennett,34,17.35,6000
+38,3,2,Ahman,Green,30,25.03,8800
+39,4,2,Tiki,Barber,21,26.11,9100
+40,4,2,Rodney,Hampton,27,20.18,7000
+41,5,2,Barry,Sanders,20,26.19,9100
+42,5,2,Billy,Sims,20,24.46,8600
+43,6,2,Clinton,Portis,26,19.38,6800
+44,6,2,John,Riggins,44,17.9,6200
+45,7,2,Ricky,Watters,32,21.19,7400
+46,7,2,Brian,Westbrook,36,26.83,9400
+47,8,2,Jerome,Bettis,36,16.92,5900
+48,8,2,Franco,Harris ,32,21.92,7600
+49,9,2,Eric,Dickerson,29,25.74,9000
+50,9,2,Marshall ,Faulk,28,32.96,11500
+51,10,2,Roger,Craig,33,22.03,7700
+52,10,2,Garrison,Hearst,20,22.16,7800
+53,11,2,Jim,Brown,32,29.56,10000
+54,11,2,Earnest,Byner,44,18.21,6300
+55,12,2,Joseph,Addai,29,22.93,8000
+56,12,2,Edgerrin,James,32,25.27,8800
+57,13,2,Tony,Dorsett,33,18.87,6600
+58,13,2,Emmitt,Smith,22,22.69,7900
+59,14,2,Priest,Holmes,31,33.23,11600
+60,14,2,Larry,Johnson,27,26.14,9100
+61,15,2,Natrone,Means,20,20.48,7100
+62,15,2,Ladanian,Tomlinson,21,32.84,11500
+63,16,2,Mike,Anderson,38,21.41,7500
+64,16,2,Terrell,Davis,30,24.73,8700
+65,17,2,Curtis,Martin,28,22.08,7700
+66,17,2,Freeman,McNeil,24,21.09,7400
+67,18,2,BenJarvus,Green-Ellis,42,14.34,5000
+68,18,2,Laurence,Maroney,39,15.33,5300
+69,19,2,Marcus,Allen,32,24.54,8600
+70,19,2,Bo ,Jackson,34,16.72,5900
+71,20,2,Eddie,George,27,21.08,7400
+72,20,2,LenDale,White,25,15.79,5500
+73,21,2,O.J.,Simpson,32,25.46,8900
+74,21,2,Thurman ,Thomas,34,24.05,8400
+75,22,2,Robert,Smith,26,18.39,6400
+76,22,2,Herschel,Walker,34,15.46,5400
+77,23,2,Jamal,Anderson,32,21.84,7600
+78,23,2,Michael,Turner,33,19.43,6800
+79,24,2,Ronnie,Brown,23,19.66,6800
+80,24,2,Larry,Csonka,39,15.89,5600
+81,25,2,Deuce,McAllister,26,20.93,7300
+82,25,2,Ricky,Williams,34,20.53,7200
+83,26,2,Corey,Dillon,28,24.15,8500
+84,26,2,Rudi,Johnson,32,20.45,7100
+85,27,2,Shaun ,Alexander,37,24.21,8500
+86,27,2,Chris,Warren,42,17.71,6200
+87,28,2,Warrick,Dunn,28,23.4,8200
+88,28,2,Errict,Rhett,32,13.71,4800
+89,29,2,Tim,Biakabutuka,21,19.08,6700
+90,29,2,Fred ,Lane,32,13.73,4800
+91,30,2,Maurice,Jones-Drew,32,22.79,8000
+92,30,2,Fred ,Taylor,28,24.55,8600
+93,31,2,Jamal,Lewis,31,23.63,8300
+94,31,2,Ray,Rice,27,22.17,7800
+95,32,2,Earl,Campbell,34,23.22,8100
+96,32,2,Lorenzo,White,44,19.84,7000
