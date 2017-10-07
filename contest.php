@@ -56,7 +56,7 @@
                       </tbody>
                     </table>
                   </div>
-                  <div class=\"footer\"><a href=\"#\">Depth Charts &nbsp;</a></div>
+                  <div id=\"" . $row["teamID"] .  "\" class=\"footer\"><a href=\"#\" data-toggle=\"modal\" data-target=\"#depthChartModal\">Depth Charts &nbsp;</a></div>
                 </div>
                 </div>";
               }
@@ -69,6 +69,34 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="depthChartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
   <div class="row vs-20">
   <div class="col-6">
     <div class="row draft-table-heading">
@@ -158,13 +186,77 @@
       ?>
     </div>
     <div class="tab-pane fade" id="wr" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
-      WRs
+      <?php $sql = "SELECT * FROM legends_player l LEFT JOIN teams t ON l.teamID = t.teamID  WHERE posID = 3 ORDER BY salary DESC, fppg DESC";
+  $result = mysqli_query($conn, $sql);
+  if (mysqli_num_rows($result) > 0) {
+      // output data of each row
+      while($row = mysqli_fetch_assoc($result)) {
+        $salary = number_format($row["salary"]);
+        echo "<div class=\"draftTableData\">
+          <div class=\"dtdata dt-pos\">WR</div>
+          <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+          <div class=\"dtdata dt-opp\">" . $row["abbrv"] . " @ --</div>
+          <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
+          <div class=\"dtdata dt-oprk\">----</div>
+          <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
+          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+        </div>";
+      }
+  } else {
+      echo "0 results";
+  }
+      ?>
     </div>
     <div class="tab-pane fade" id="te" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
-      TEs
+      <?php $sql = "SELECT * FROM legends_player l LEFT JOIN teams t ON l.teamID = t.teamID  WHERE posID = 4 ORDER BY salary DESC, fppg DESC";
+  $result = mysqli_query($conn, $sql);
+  if (mysqli_num_rows($result) > 0) {
+      // output data of each row
+      while($row = mysqli_fetch_assoc($result)) {
+        $salary = number_format($row["salary"]);
+        echo "<div class=\"draftTableData\">
+          <div class=\"dtdata dt-pos\">TE</div>
+          <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+          <div class=\"dtdata dt-opp\">" . $row["abbrv"] . " @ --</div>
+          <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
+          <div class=\"dtdata dt-oprk\">----</div>
+          <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
+          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+        </div>";
+      }
+  } else {
+      echo "0 results";
+  }
+      ?>
     </div>
     <div class="tab-pane fade" id="flex" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
-      FLEXs
+      <?php $sql = "SELECT * FROM legends_player l LEFT JOIN teams t ON l.teamID = t.teamID  WHERE posID = 2 OR posID = 3 OR posID = 4 ORDER BY salary DESC, fppg DESC";
+  $result = mysqli_query($conn, $sql);
+  if (mysqli_num_rows($result) > 0) {
+      // output data of each row
+      while($row = mysqli_fetch_assoc($result)) {
+        $salary = number_format($row["salary"]);
+        if($row["posID"] === "2") {
+          $row["posID"] = "RB";
+        } elseif ($row["posID"] === "3") {
+          $row["posID"] = "WR";
+        }  else {
+            $row["posID"] = "TE";
+        }
+        echo "<div class=\"draftTableData\" id=\"" . $row["playerID"] . "flex \">
+          <div class=\"dtdata dt-pos\">" . $row["posID"] . "</div>
+          <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+          <div class=\"dtdata dt-opp\">" . $row["abbrv"] . " @ --</div>
+          <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
+          <div class=\"dtdata dt-oprk\">----</div>
+          <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
+          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+        </div>";
+      }
+  } else {
+      echo "0 results";
+  }
+      ?>
     </div>
     <div class="tab-pane fade" id="dst" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
       <?php $sql = "SELECT * FROM legends_dst";
@@ -189,7 +281,35 @@
       ?>
     </div>
     <div class="tab-pane fade" id="all" role="tabpanel" aria-labelledby="profile-tab" aria-expanded="false">
-      All
+      <?php $sql = "SELECT * FROM legends_player l LEFT JOIN teams t ON l.teamID = t.teamID ORDER BY salary DESC, fppg DESC";
+  $result = mysqli_query($conn, $sql);
+  if (mysqli_num_rows($result) > 0) {
+      // output data of each row
+      while($row = mysqli_fetch_assoc($result)) {
+        $salary = number_format($row["salary"]);
+        if($row["posID"] === "1") {
+          $row["posID"] = "QB";
+        } elseif ($row["posID"] === "2") {
+          $row["posID"] = "RB";
+        }  elseif ($row["posID"] === "3") {
+          $row["posID"] = "WR";
+        } else {
+            $row["posID"] = "TE";
+        }
+        echo "<div class=\"draftTableData\">
+          <div class=\"dtdata dt-pos\">" . $row["posID"] . "</div>
+          <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+          <div class=\"dtdata dt-opp\">" . $row["abbrv"] . " @ --</div>
+          <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
+          <div class=\"dtdata dt-oprk\">----</div>
+          <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
+          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+        </div>";
+      }
+  } else {
+      echo "0 results";
+  }
+      ?>
     </div>
   </div>
 </div>
@@ -234,12 +354,12 @@
     </div>
     <div class="draftTableData">
       <div class="dtdata dt-pos">QB</div>
-      <div class="dtdata dt-player">J. Montana</div>
-      <div class="dtdata dt-opp">SF @ --</div>
-      <div class="dtdata dt-fppg">19.57</div>
-      <div class="dtdata dt-oprk">----</div>
-      <div class="dtdata dt-salary">$10,500</div>
-      <div style="display:inline-block;" class="dtdata dt-rmv"><i  class="fa fa-window-close" aria-hidden="true"></i></div>
+      <div class="dtdata dt-player"></div>
+      <div class="dtdata dt-opp"></div>
+      <div class="dtdata dt-fppg"></div>
+      <div class="dtdata dt-oprk"></div>
+      <div class="dtdata dt-salary"></div>
+      <div style="display:inline-block;" class="dtdata dt-rmv"><i  class="fa fa-window-close hidden" aria-hidden="true"></i></div>
     </div>
     <div class="draftTableData">
       <div class="dtdata dt-pos">RB</div>
