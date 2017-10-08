@@ -10,5 +10,13 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.15.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/td6778/playerstock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/td6778/playerstock/issues"
+  },
+  "homepage": "https://github.com/td6778/playerstock#readme"
 }

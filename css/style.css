@@ -1336,6 +1336,20 @@ tr.even {
   margin: 0px !important;
 }
 /* ***************** End LiveGame CSS ********************** */
+
+/* ***************** Start Modal CSS ********************** */
+.modalData, .modalHeader {
+  width: 400px;
+  margin: auto;
+}
+.dtdata.dt-add.modal-add {
+    margin-left: 12px;
+}
+.modal-dialog {
+  position: relative;
+  top: 15%;
+}
+/* ***************** End Modal CSS ********************** */
 #footer {
     background-color: #1a1a1a;
     width: 100%;

@@ -42,6 +42,7 @@
           if (mysqli_num_rows($result) > 0) {
               // output data of each row
               while($row = mysqli_fetch_assoc($result)) {
+                  $teamID = $row["teamID"];
                 echo "<div class=\"game-block\">
                   <div class=\"game\"><div class=\"information\">
                     <i class=\"fa fa-info-circle\"></i>
@@ -51,12 +52,12 @@
                           <td class=\"team-names\">" . $row["team_name"] . "</td>
                         </tr>
                         <tr>
-                          <td class=\"team-names\">All-Pros</td>
+                          <td class=\"team-names\">Legends</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
-                  <div id=\"" . $row["teamID"] .  "\" class=\"footer\"><a href=\"#\" data-toggle=\"modal\" data-target=\"#depthChartModal\">Depth Charts &nbsp;</a></div>
+                  <div id=\"" . $row["teamID"] .  "\" class=\"footer\"><a href=\"#\" data-toggle=\"modal\" data-target=\"#depthChartModal" .  $row["teamID"] . "\">Depth Charts &nbsp;</a></div>
                 </div>
                 </div>";
               }
@@ -69,30 +70,91 @@
       </div>
     </div>
   </div>
-
   <!-- Modal -->
-  <div class="modal fade" id="depthChartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <?php $sql = "SELECT * FROM teams";
+        $result = mysqli_query($conn, $sql);
+        if (mysqli_num_rows($result) > 0) {
+          // output data of each row
+          while($row = mysqli_fetch_assoc($result)) {
 
-
-
+            echo "<div class=\"modal fade\" id=\"depthChartModal" . $row["teamID"] ."\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">
+              <div class=\"modal-dialog\" role=\"document\">
+                <div class=\"modal-content\">
+                  <div class=\"modal-header\">
+                    <h5 class=\"modal-title\" id=\"exampleModalLabel\">" . $row["team_city"] . " " . $row["team_name"] . "</h5>
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                      <span aria-hidden=\"true\">&times;</span>
+                    </button>
+                  </div>
+                  <div class=\"modal-body\"><div class=\"psTableHeader modalHeader\">
+                      <div class=\"pshead dt-pos\">POS</div>
+                      <div class=\"pshead dt-player\">Player</div>
+                      <div class=\"pshead dt-fppg\">FPPG</div>
+                      <div class=\"pshead dt-salary\">salary</div>
+                      <div class=\"pshead dt-add modal-add\">&nbsp;</div>
+                    </div>";
+                  $teamID = $row["teamID"];
+                  $sql2 = "SELECT * FROM legends_player WHERE teamID=$teamID AND  posID = 1";
+                  $result2 = mysqli_query($conn, $sql2);
+                  while($row = mysqli_fetch_assoc($result2)) {
+                    $salary = number_format($row["salary"]);
+                    echo "<div class=\"draftTableData modalData\">
+                      <div class=\"dtdata dt-pos\">QB</div>
+                      <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+                      <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
+                      <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
+                      <div class=\"dtdata dt-add modal-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+                    </div>";
+                  }
+                  $sql3 = "SELECT * FROM legends_player WHERE teamID=$teamID AND  posID = 2";
+                  $result3 = mysqli_query($conn, $sql3);
+                  while($row = mysqli_fetch_assoc($result3)) {
+                    $salary = number_format($row["salary"]);
+                    echo "<div class=\"draftTableData modalData\">
+                      <div class=\"dtdata dt-pos\">RB</div>
+                      <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+                      <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
+                      <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
+                      <div class=\"dtdata dt-add modal-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+                    </div>";
+                  }
+                  $sql4 = "SELECT * FROM legends_player WHERE teamID=$teamID AND  posID = 3";
+                  $result4 = mysqli_query($conn, $sql4);
+                  while($row = mysqli_fetch_assoc($result4)) {
+                    $salary = number_format($row["salary"]);
+                    echo "<div class=\"draftTableData modalData\">
+                      <div class=\"dtdata dt-pos\">WR</div>
+                      <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+                      <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
+                      <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
+                      <div class=\"dtdata dt-add modal-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+                    </div>";
+                  }
+                  $sql5 = "SELECT * FROM legends_player WHERE teamID=$teamID AND  posID = 4";
+                  $result5 = mysqli_query($conn, $sql5);
+                  while($row = mysqli_fetch_assoc($result5)) {
+                    $salary = number_format($row["salary"]);
+                    echo "<div class=\"draftTableData modalData\">
+                      <div class=\"dtdata dt-pos\">TE</div>
+                      <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+                      <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
+                      <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
+                      <div class=\"dtdata dt-add modal-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+                    </div>";
+                  }
+                  echo
+                  "</div>
+                  <div class=\"modal-footer\">
+                    <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>";
+              }
+          } else {
+              echo "0 results";
+          }
+              ?>
 
 
 
