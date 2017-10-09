@@ -14,6 +14,10 @@ body {
 hr {
     border-top:1px solid #474648 !important;
 }
+
+a:visited {
+  text-decoration: none !important;
+}
 .brand-color {
   color: #00460F !important;
 }
@@ -680,6 +684,13 @@ a.btn.btn-challenge {
 .game {
   cursor: pointer;
 }
+.game .footer a:link {
+    color: #00460F !important;
+    text-decoration: none !important;
+}
+.game .footer a:hover {
+  text-decoration: underline !important;
+}
 .game-list.styled .game-block.all {
     float: left;
     vertical-align: top;
@@ -1337,7 +1348,7 @@ tr.even {
 }
 /* ***************** End LiveGame CSS ********************** */
 
-/* ***************** Start Modal CSS ********************** */
+/* ***************** Start Modal/Popover CSS ********************** */
 .modalData, .modalHeader {
   width: 400px;
   margin: auto;
@@ -1349,7 +1360,21 @@ tr.even {
   position: relative;
   top: 15%;
 }
-/* ***************** End Modal CSS ********************** */
+.popover-title {
+    color: #00460F;
+    font-size: 16px;
+    font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
+    font-weight: bold;
+    padding: 5px;
+}
+.popover-content {
+    color: #1a1a1a;
+    margin-top: -20px;
+    font-size: 10px;
+    padding: 10px;
+    text-align: left;
+}
+/* ***************** End Modal/Popover CSS ********************** */
 #footer {
     background-color: #1a1a1a;
     width: 100%;

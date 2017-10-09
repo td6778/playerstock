@@ -35,17 +35,23 @@
             </div>
           </div>
         </div>
+
           <div class="scrolling-box col-10">
             <div class="games-holder">
-              <?php $sql = "SELECT * FROM teams";
+              <?php $sql = "SELECT * FROM teams t LEFT JOIN stadiums s ON t.stadiumID = s.stadiumID LEFT JOIN surfaces f ON s.surfaceID = f.surfaceID LEFT JOIN roofs r ON s.roofID = r.roofID ORDER BY team_name";
           $result = mysqli_query($conn, $sql);
           if (mysqli_num_rows($result) > 0) {
               // output data of each row
               while($row = mysqli_fetch_assoc($result)) {
                   $teamID = $row["teamID"];
+                  $capacity = number_format($row["capacity"]);
                 echo "<div class=\"game-block\">
                   <div class=\"game\"><div class=\"information\">
-                    <i class=\"fa fa-info-circle\"></i>
+
+                    <i class=\"fa fa-info-circle\" tabindex=\"0\" data-toggle=\"popover\" data-trigger=\"focus\" data-html=\"true\"
+                    title=\"" . $row["stadium_name"] . "\" data-content=\"Capacity: " . $capacity . "<br/>Surface: " . $row["surface_type"] .  "<br/>Roof: " . $row["roof_type"] .  "\"></i>
+
+
                     <table class=\"table branded headless game\">
                       <tbody>
                         <tr>
