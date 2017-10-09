@@ -49,7 +49,7 @@
                   <div class=\"game\"><div class=\"information\">
 
                     <i class=\"fa fa-info-circle\" tabindex=\"0\" data-toggle=\"popover\" data-trigger=\"focus\" data-html=\"true\"
-                    title=\"" . $row["stadium_name"] . "\" data-content=\"Capacity: " . $capacity . "<br/>Surface: " . $row["surface_type"] .  "<br/>Roof: " . $row["roof_type"] .  "\"></i>
+                    title=\"" . $row["stadium_name"] ."\" data-content=\"<b>" . $row["stadium_city"] .  ", " .  $row["stadium_state"] .  "</b> <br/> Capacity: " . $capacity . "<br/>Surface: " . $row["surface_type"] .  "<br/>Roof: " . $row["roof_type"] .  "\"></i>
 
 
                     <table class=\"table branded headless game\">

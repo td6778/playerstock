@@ -1365,7 +1365,8 @@ tr.even {
     font-size: 16px;
     font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
     font-weight: bold;
-    padding: 5px;
+    padding: 5px 10px;
+    min-width: 200px;
 }
 .popover-content {
     color: #1a1a1a;
