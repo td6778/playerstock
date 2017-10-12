@@ -6,8 +6,42 @@ $(function () {
 });
 
 function addPlayer(pid,posid,playerfullname, opp, fppg, salary){
-
+  switch (posid) {
+    case 1:
+        var pos = "qb";
+      break;
+    case 2:
+        if(document.getElementById("rb1-player").innerHTML.trim().length === 0){
+            var pos = "rb1";
+        } else if (document.getElementById("rb2-player").innerHTML.trim().length === 0) {
+          var pos = "rb2";
+        } else {
+          var pos = "flex";
+        }
+      break;
+      case 3:
+          if(document.getElementById("wr1-player").innerHTML.trim().length === 0){
+              var pos = "wr1";
+          } else if (document.getElementById("wr2-player").innerHTML.trim().length === 0) {
+            var pos = "wr2";
+          } else if (document.getElementById("wr3-player").innerHTML.trim().length === 0) {
+            var pos = "wr3";
+          } else {
+            var pos = "flex";
+          }
+        break;
+    case 4:
+        var pos = "te";
+      break;
+    case 5:
+          var pos = "dst";
+      break;
+    default: var pos ="";
+  }
+  console.log(flexid);
   var playerpid = document.getElementById(pid);
+  var flexid = document.getElementById(pid + "flex");
+  var allid = document.getElementById(pid + "all");
   var pospid = document.getElementById(pos + "-pid");
   var posplayer = document.getElementById(pos + "-player");
   var posopp = document.getElementById(pos + "-opp");
@@ -24,6 +58,11 @@ function addPlayer(pid,posid,playerfullname, opp, fppg, salary){
     posfppg.innerHTML = fppg;
     possalary.innerHTML = '$' + salary.toLocaleString();
     posclose.classList.remove("hidden");
+    flexid.classList.remove("show-block");
+    flexid.classList.add("hidden");
+    allid.classList.remove("show-block");
+    allid.classList.add("hidden");
+
 
   } else {
     console.log("Position Filled");
@@ -38,7 +77,7 @@ function removePlayer(lineupPos) {
   document.getElementById(lineupPos + "-fppg").innerHTML = "";
   document.getElementById(lineupPos + "-oprk").innerHTML = "";
   document.getElementById(lineupPos + "-salary").innerHTML = "";
-  document.getElementById("qb-close").classList.add("hidden");
+  document.getElementById(lineupPos + "-close").classList.add("hidden");
   playerpid.classList.remove("hidden");
   playerpid.classList.add("show-block");
 

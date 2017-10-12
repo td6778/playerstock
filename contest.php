@@ -240,14 +240,16 @@
       // output data of each row
       while($row = mysqli_fetch_assoc($result)) {
         $salary = number_format($row["salary"]);
-        echo "<div class=\"draftTableData\">
+        $playerfullname = $row["player_first"] . " " . $row["player_last"];
+        $rbargs = $row["playerID"] . "," . $row["posID"] . ",'" . $playerfullname . "','" . $row["abbrv"] . "'," . $row["fppg"] . ","  . $row["salary"];
+        echo "<div id=\"" . $row["playerID"] . "\" class=\"draftTableData show-block\">
           <div class=\"dtdata dt-pos\">RB</div>
           <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
           <div class=\"dtdata dt-opp\">" . $row["abbrv"] . " @ --</div>
           <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
           <div class=\"dtdata dt-oprk\">----</div>
           <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
-          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square show-block\" aria-hidden=\"true\" onclick=\"addPlayer(" . $rbargs . ")\"></i></div>
         </div>";
       }
   } else {
@@ -262,14 +264,16 @@
       // output data of each row
       while($row = mysqli_fetch_assoc($result)) {
         $salary = number_format($row["salary"]);
-        echo "<div class=\"draftTableData\">
-          <div class=\"dtdata dt-pos\">WR</div>
+        $playerfullname = $row["player_first"] . " " . $row["player_last"];
+        $wrargs = $row["playerID"] . "," . $row["posID"] . ",'" . $playerfullname . "','" . $row["abbrv"] . "'," . $row["fppg"] . ","  . $row["salary"];
+        echo "<div id=\"" . $row["playerID"] . "\" class=\"draftTableData show-block\">
+          <div class=\"dtdata dt-pos\">RB</div>
           <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
           <div class=\"dtdata dt-opp\">" . $row["abbrv"] . " @ --</div>
           <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
           <div class=\"dtdata dt-oprk\">----</div>
           <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
-          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square show-block\" aria-hidden=\"true\" onclick=\"addPlayer(" . $wrargs . ")\"></i></div>
         </div>";
       }
   } else {
@@ -284,14 +288,16 @@
       // output data of each row
       while($row = mysqli_fetch_assoc($result)) {
         $salary = number_format($row["salary"]);
-        echo "<div class=\"draftTableData\">
-          <div class=\"dtdata dt-pos\">TE</div>
+        $playerfullname = $row["player_first"] . " " . $row["player_last"];
+        $teargs = $row["playerID"] . "," . $row["posID"] . ",'" . $playerfullname . "','" . $row["abbrv"] . "'," . $row["fppg"] . ","  . $row["salary"];
+        echo "<div id=\"" . $row["playerID"] . "\" class=\"draftTableData show-block\">
+          <div class=\"dtdata dt-pos\">RB</div>
           <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
           <div class=\"dtdata dt-opp\">" . $row["abbrv"] . " @ --</div>
           <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
           <div class=\"dtdata dt-oprk\">----</div>
           <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
-          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square show-block\" aria-hidden=\"true\" onclick=\"addPlayer(" . $teargs . ")\"></i></div>
         </div>";
       }
   } else {
@@ -306,21 +312,29 @@
       // output data of each row
       while($row = mysqli_fetch_assoc($result)) {
         $salary = number_format($row["salary"]);
-        if($row["posID"] === "2") {
-          $row["posID"] = "RB";
-        } elseif ($row["posID"] === "3") {
-          $row["posID"] = "WR";
-        }  else {
-            $row["posID"] = "TE";
-        }
-        echo "<div class=\"draftTableData\" id=\"" . $row["playerID"] . "flex \">
-          <div class=\"dtdata dt-pos\">" . $row["posID"] . "</div>
+        $playerfullname = $row["player_first"] . " " . $row["player_last"];
+        $flexargs = $row["playerID"] . "," . $row["posID"] . ",'" . $playerfullname . "','" . $row["abbrv"] . "'," . $row["fppg"] . ","  . $row["salary"];
+        echo "<div id=\"" . $row["playerID"] . "flex\" class=\"draftTableData show-block\">
+
+          <div class=\"dtdata dt-pos\">";
+
+          if($row["posID"] === "2") {
+            echo "RB";
+          } elseif ($row["posID"] === "3") {
+          echo "WR";
+          }  else {
+              echo "TE";
+          }
+
+          echo "</div>
+
+
           <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
           <div class=\"dtdata dt-opp\">" . $row["abbrv"] . " @ --</div>
           <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
           <div class=\"dtdata dt-oprk\">----</div>
           <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
-          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square show-block\" aria-hidden=\"true\" onclick=\"addPlayer(" . $flexargs . ")\"></i></div>
         </div>";
       }
   } else {
@@ -335,6 +349,8 @@
       // output data of each row
       while($row = mysqli_fetch_assoc($result)) {
         $salary = number_format($row["dst_salary"]);
+        $playerfullname = $row["dst_year"] . " " . $row["dst_team"];
+        $dstargs = $row["dstID"] . ",5,'" . $playerfullname . "','" . $row["dst_abbrv"] . "'," . $row["dst_fppg"] . ","  . $row["dst_salary"];
         echo "<div class=\"draftTableData\">
           <div class=\"dtdata dt-pos\">DST</div>
           <div class=\"dtdata dt-player\">" . $row["dst_year"] . " " . $row["dst_team"] ."</div>
@@ -342,7 +358,7 @@
           <div class=\"dtdata dt-fppg\">" . $row["dst_fppg"] . "</div>
           <div class=\"dtdata dt-oprk\">----</div>
           <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
-          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square show-block\" aria-hidden=\"true\" onclick=\"addPlayer(" . $dstargs . ")\"></i></div>
         </div>";
       }
   } else {
@@ -357,23 +373,28 @@
       // output data of each row
       while($row = mysqli_fetch_assoc($result)) {
         $salary = number_format($row["salary"]);
-        if($row["posID"] === "1") {
-          $row["posID"] = "QB";
-        } elseif ($row["posID"] === "2") {
-          $row["posID"] = "RB";
-        }  elseif ($row["posID"] === "3") {
-          $row["posID"] = "WR";
-        } else {
-            $row["posID"] = "TE";
-        }
-        echo "<div class=\"draftTableData\">
-          <div class=\"dtdata dt-pos\">" . $row["posID"] . "</div>
+        $playerfullname = $row["player_first"] . " " . $row["player_last"];
+        $allargs = $row["playerID"] . "," . $row["posID"] . ",'" . $playerfullname . "','" . $row["abbrv"] . "'," . $row["fppg"] . ","  . $row["salary"];
+        echo "<div id=\"" . $row["playerID"] . "all\" class=\"draftTableData show-block\">
+          <div class=\"dtdata dt-pos\">";
+
+          if($row["posID"] === "1") {
+            echo "QB";
+          } elseif ($row["posID"] === "2") {
+            echo "RB";
+          }  elseif ($row["posID"] === "3") {
+            echo "WR";
+          } else {
+              echo "TE";
+          }
+
+           echo "</div>
           <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
           <div class=\"dtdata dt-opp\">" . $row["abbrv"] . " @ --</div>
           <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
           <div class=\"dtdata dt-oprk\">----</div>
           <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
-          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+          <div class=\"dtdata dt-add\"><i class=\"fa fa-plus-square show-block\" aria-hidden=\"true\" onclick=\"addPlayer(" . $allargs . ")\"></i></div>
         </div>";
       }
   } else {
@@ -440,70 +461,77 @@
       <div id="rb1-fppg" class="dtdata dt-fppg"></div>
       <div id="rb1-oprk" class="dtdata dt-oprk"></div>
       <div id="rb1-salary" class="dtdata dt-salary"></div>
-      <div class="dtdata dt-rmv"><i id="rb1-close" class="fa fa-window-close" aria-hidden="true"></i></div>
+      <div style="display:inline-block;" class="dtdata dt-rmv"><i id="rb1-close" class="fa fa-window-close hidden" aria-hidden="true" onclick="removePlayer('rb1')"></i></div>
     </div>
     <div class="draftTableData">
       <div class="dtdata dt-pos">RB</div>
-      <div class="dtdata dt-player"></div>
-      <div class="dtdata dt-opp"></div>
-      <div class="dtdata dt-fppg"></div>
-      <div class="dtdata dt-oprk"></div>
-      <div class="dtdata dt-salary"></div>
-      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+      <div id="rb2-pid" class="hidden"></div>
+      <div id="rb2-player" class="dtdata dt-player"></div>
+      <div id="rb2-opp" class="dtdata dt-opp"></div>
+      <div id="rb2-fppg" class="dtdata dt-fppg"></div>
+      <div id="rb2-oprk" class="dtdata dt-oprk"></div>
+      <div id="rb2-salary" class="dtdata dt-salary"></div>
+      <div style="display:inline-block;" class="dtdata dt-rmv"><i id="rb2-close" class="fa fa-window-close hidden" aria-hidden="true" onclick="removePlayer('rb2')"></i></div>
     </div>
     <div class="draftTableData">
       <div class="dtdata dt-pos">WR</div>
-      <div class="dtdata dt-player"></div>
-      <div class="dtdata dt-opp"></div>
-      <div class="dtdata dt-fppg"></div>
-      <div class="dtdata dt-oprk"></div>
-      <div class="dtdata dt-salary"></div>
-      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+      <div id="wr1-pid" class="hidden"></div>
+      <div id="wr1-player" class="dtdata dt-player"></div>
+      <div id="wr1-opp" class="dtdata dt-opp"></div>
+      <div id="wr1-fppg" class="dtdata dt-fppg"></div>
+      <div id="wr1-oprk" class="dtdata dt-oprk"></div>
+      <div id="wr1-salary" class="dtdata dt-salary"></div>
+      <div style="display:inline-block;" class="dtdata dt-rmv"><i id="wr1-close" class="fa fa-window-close hidden" aria-hidden="true" onclick="removePlayer('wr1')"></i></div>
     </div>
     <div class="draftTableData">
       <div class="dtdata dt-pos">WR</div>
-      <div class="dtdata dt-player"></div>
-      <div class="dtdata dt-opp"></div>
-      <div class="dtdata dt-fppg"></div>
-      <div class="dtdata dt-oprk"></div>
-      <div class="dtdata dt-salary"></div>
-      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+      <div id="wr2-pid" class="hidden"></div>
+      <div id="wr2-player" class="dtdata dt-player"></div>
+      <div id="wr2-opp" class="dtdata dt-opp"></div>
+      <div id="wr2-fppg" class="dtdata dt-fppg"></div>
+      <div id="wr2-oprk" class="dtdata dt-oprk"></div>
+      <div id="wr2-salary" class="dtdata dt-salary"></div>
+      <div style="display:inline-block;" class="dtdata dt-rmv"><i id="wr2-close" class="fa fa-window-close hidden" aria-hidden="true" onclick="removePlayer('wr2')"></i></div>
     </div>
     <div class="draftTableData">
       <div class="dtdata dt-pos">WR</div>
-      <div class="dtdata dt-player"></div>
-      <div class="dtdata dt-opp"></div>
-      <div class="dtdata dt-fppg"></div>
-      <div class="dtdata dt-oprk"></div>
-      <div class="dtdata dt-salary"></div>
-      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+      <div id="wr3-pid" class="hidden"></div>
+      <div id="wr3-player" class="dtdata dt-player"></div>
+      <div id="wr3-opp" class="dtdata dt-opp"></div>
+      <div id="wr3-fppg" class="dtdata dt-fppg"></div>
+      <div id="wr3-oprk" class="dtdata dt-oprk"></div>
+      <div id="wr3-salary" class="dtdata dt-salary"></div>
+      <div style="display:inline-block;" class="dtdata dt-rmv"><i id="wr3-close" class="fa fa-window-close hidden" aria-hidden="true" onclick="removePlayer('wr3')"></i></div>
     </div>
     <div class="draftTableData">
       <div class="dtdata dt-pos">TE</div>
-      <div class="dtdata dt-player"></div>
-      <div class="dtdata dt-opp"></div>
-      <div class="dtdata dt-fppg"></div>
-      <div class="dtdata dt-oprk"></div>
-      <div class="dtdata dt-salary"></div>
-      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+      <div id="te-pid" class="hidden"></div>
+      <div id="te-player" class="dtdata dt-player"></div>
+      <div id="te-opp" class="dtdata dt-opp"></div>
+      <div id="te-fppg" class="dtdata dt-fppg"></div>
+      <div id="te-oprk" class="dtdata dt-oprk"></div>
+      <div id="te-salary" class="dtdata dt-salary"></div>
+      <div style="display:inline-block;" class="dtdata dt-rmv"><i id="te-close" class="fa fa-window-close hidden" aria-hidden="true" onclick="removePlayer('te')"></i></div>
     </div>
     <div class="draftTableData">
       <div class="dtdata dt-pos">FLEX</div>
-      <div class="dtdata dt-player"></div>
-      <div class="dtdata dt-opp"></div>
-      <div class="dtdata dt-fppg"></div>
-      <div class="dtdata dt-oprk"></div>
-      <div class="dtdata dt-salary"></div>
-      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+      <div id="flex-pid" class="hidden"></div>
+      <div id="flex-player" class="dtdata dt-player"></div>
+      <div id="flex-opp" class="dtdata dt-opp"></div>
+      <div id="flex-fppg" class="dtdata dt-fppg"></div>
+      <div id="flex-oprk" class="dtdata dt-oprk"></div>
+      <div id="flex-salary" class="dtdata dt-salary"></div>
+      <div style="display:inline-block;" class="dtdata dt-rmv"><i id="flex-close" class="fa fa-window-close hidden" aria-hidden="true" onclick="removePlayer('flex')"></i></div>
     </div>
     <div class="draftTableData">
       <div class="dtdata dt-pos">DST</div>
-      <div class="dtdata dt-player"></div>
-      <div class="dtdata dt-opp"></div>
-      <div class="dtdata dt-fppg"></div>
-      <div class="dtdata dt-oprk"></div>
-      <div class="dtdata dt-salary"></div>
-      <div class="dtdata dt-rmv"><i class="fa fa-window-close" aria-hidden="true"></i></div>
+      <div id="dst-pid" class="hidden"></div>
+      <div id="dst-player" class="dtdata dt-player"></div>
+      <div id="dst-opp" class="dtdata dt-opp"></div>
+      <div id="dst-fppg" class="dtdata dt-fppg"></div>
+      <div id="dst-oprk" class="dtdata dt-oprk"></div>
+      <div id="dst-salary" class="dtdata dt-salary"></div>
+      <div style="display:inline-block;" class="dtdata dt-rmv"><i id="dst-close" class="fa fa-window-close hidden" aria-hidden="true" onclick="removePlayer('dst')"></i></div>
     </div>
     <div class="row"><!--Row 2 --></div>
     <div class="row">
