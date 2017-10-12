@@ -33,9 +33,7 @@ a:visited {
 .white {
     color: #fff;
 }
-.hidden {
-    display: none;
-}
+
 .caret{
     cursor: pointer;
 }
@@ -77,7 +75,12 @@ a:visited {
     border: 1px solid #00ff00;
     background-color: #999;
 }
-
+.show-block {
+  display: block;
+}
+.hidden {
+    display: none;
+}
 /*************************** Start Nav CSS *****************************/
 .primary-nav {
     background-color: #00460F;
@@ -902,7 +905,7 @@ table.table.branded.headless tbody tr:nth-child(odd) {
   text-align: right;
   padding-left: 15px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
 }
 .draft-table-options {
   font-size: 14px;
