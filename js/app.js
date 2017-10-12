@@ -6,23 +6,25 @@ $(function () {
 });
 
 function addPlayer(pid,posid,playerfullname, opp, fppg, salary){
+
   var playerpid = document.getElementById(pid);
-  var qbpid = document.getElementById("qb-pid");
-  var qbplayer = document.getElementById("qb-player");
-  var qbopp = document.getElementById("qb-opp");
-  var qbfppg = document.getElementById("qb-fppg");
-  var qboprk = document.getElementById("qb-oprk");
-  var qbsalary = document.getElementById("qb-salary");
-  var qbclose = document.getElementById("qb-close");
-    if(qbplayer.innerHTML === "") {
+  var pospid = document.getElementById(pos + "-pid");
+  var posplayer = document.getElementById(pos + "-player");
+  var posopp = document.getElementById(pos + "-opp");
+  var posfppg = document.getElementById(pos + "-fppg");
+  var posoprk = document.getElementById(pos + "-oprk");
+  var possalary = document.getElementById(pos + "-salary");
+  var posclose = document.getElementById(pos + "-close");
+    if(posplayer.innerHTML === "") {
     playerpid.classList.remove("show-block");
     playerpid.classList.add("hidden");
-    qbpid.innerHTML = pid;
-    qbplayer.innerHTML = playerfullname;
-    qbopp.innerHTML = opp;
-    qbfppg.innerHTML = fppg;
-    qbsalary.innerHTML = '$' + salary.toLocaleString();
-    qbclose.classList.remove("hidden");
+    pospid.innerHTML = pid;
+    posplayer.innerHTML = playerfullname;
+    posopp.innerHTML = opp;
+    posfppg.innerHTML = fppg;
+    possalary.innerHTML = '$' + salary.toLocaleString();
+    posclose.classList.remove("hidden");
+
   } else {
     console.log("Position Filled");
   }

@@ -391,7 +391,7 @@
   </div><!-- end row 1 -->
     <div class="row draft-table-options">
       <div class="col-7">
-      <input type="checkbox" checked="checked" /><span class="aap-label"> Auto Advance Positions</span>
+      <input id="aap" type="checkbox" checked="checked" /><span class="aap-label"> Auto Advance Positions</span>
     </div>
       <div class="col-5 draft-table-option-links">
         <a href="#">Glossary</a>
