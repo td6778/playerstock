@@ -6,6 +6,7 @@ $(function () {
 });
 
 function addPlayer(pid,posid,playerfullname, opp, fppg, salary){
+  var flexid = "";
   switch (posid) {
     case 1:
         var pos = "qb";
@@ -38,7 +39,7 @@ function addPlayer(pid,posid,playerfullname, opp, fppg, salary){
       break;
     default: var pos ="";
   }
-  console.log(flexid);
+
   var playerpid = document.getElementById(pid);
   var flexid = document.getElementById(pid + "flex");
   var allid = document.getElementById(pid + "all");
@@ -50,6 +51,7 @@ function addPlayer(pid,posid,playerfullname, opp, fppg, salary){
   var possalary = document.getElementById(pos + "-salary");
   var posclose = document.getElementById(pos + "-close");
     if(posplayer.innerHTML === "") {
+    totalSalary(salary);
     playerpid.classList.remove("show-block");
     playerpid.classList.add("hidden");
     pospid.innerHTML = pid;
@@ -80,5 +82,19 @@ function removePlayer(lineupPos) {
   document.getElementById(lineupPos + "-close").classList.add("hidden");
   playerpid.classList.remove("hidden");
   playerpid.classList.add("show-block");
+
+}
+
+function totalSalary(s) {
+
+  var avgRemain = document.getElementById("avgRemain");
+  var innerSalRemain = document.getElementById("salRemain").innerHTML;
+  var salRemain = parseInt(innerSalRemain);
+  var playerSalary = s/1000;
+  var totalSal = (salRemain - playerSalary) * 1000;
+  document.getElementById("salRemain").innerHTML = totalSal.toLocaleString();
+  console.log(salRemain);
+  console.log(playerSalary);
+
 
 }

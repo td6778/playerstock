@@ -267,7 +267,7 @@
         $playerfullname = $row["player_first"] . " " . $row["player_last"];
         $wrargs = $row["playerID"] . "," . $row["posID"] . ",'" . $playerfullname . "','" . $row["abbrv"] . "'," . $row["fppg"] . ","  . $row["salary"];
         echo "<div id=\"" . $row["playerID"] . "\" class=\"draftTableData show-block\">
-          <div class=\"dtdata dt-pos\">RB</div>
+          <div class=\"dtdata dt-pos\">WR</div>
           <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
           <div class=\"dtdata dt-opp\">" . $row["abbrv"] . " @ --</div>
           <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
@@ -291,7 +291,7 @@
         $playerfullname = $row["player_first"] . " " . $row["player_last"];
         $teargs = $row["playerID"] . "," . $row["posID"] . ",'" . $playerfullname . "','" . $row["abbrv"] . "'," . $row["fppg"] . ","  . $row["salary"];
         echo "<div id=\"" . $row["playerID"] . "\" class=\"draftTableData show-block\">
-          <div class=\"dtdata dt-pos\">RB</div>
+          <div class=\"dtdata dt-pos\">TE</div>
           <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
           <div class=\"dtdata dt-opp\">" . $row["abbrv"] . " @ --</div>
           <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
@@ -427,11 +427,11 @@
       <div class="col-4"><h3>Lineup</h3></div>
       <div class="col-4 avg-rem-div">
         <span class="avg-rem-txt">Avg. Rem./Player:</span>
-        <span class="avg-rem neon-green bold numbers">$5,555</span>
+        <span class="avg-rem neon-green bold numbers">$<span id="avgRemain">5,555</span></span>
       </div>
       <div class="col-4 rem-salary-div">
         <span class="avg-rem-txt">Rem. Salary:&nbsp;</span>
-        <span class="avg-rem neon-green bold numbers">$50,000</span>
+        <span class="avg-rem neon-green bold numbers">$<span id="salRemain">50,000</span></span>
       </div>
     </div>
     <div class="psTableHeader">
