@@ -51,7 +51,7 @@ function addPlayer(pid,posid,playerfullname, opp, fppg, salary){
   var possalary = document.getElementById(pos + "-salary");
   var posclose = document.getElementById(pos + "-close");
     if(posplayer.innerHTML === "") {
-    totalSalary(salary);
+    totalSalaryAdd(salary);
     playerpid.classList.remove("show-block");
     playerpid.classList.add("hidden");
     pospid.innerHTML = pid;
@@ -60,8 +60,10 @@ function addPlayer(pid,posid,playerfullname, opp, fppg, salary){
     posfppg.innerHTML = fppg;
     possalary.innerHTML = '$' + salary.toLocaleString();
     posclose.classList.remove("hidden");
-    flexid.classList.remove("show-block");
-    flexid.classList.add("hidden");
+    if(flexid){
+      flexid.classList.remove("show-block");
+      flexid.classList.add("hidden");
+    }
     allid.classList.remove("show-block");
     allid.classList.add("hidden");
 
@@ -72,6 +74,9 @@ function addPlayer(pid,posid,playerfullname, opp, fppg, salary){
 }
 
 function removePlayer(lineupPos) {
+
+  var salary = document.getElementById(lineupPos + "-salary").innerHTML;
+  totalSalaryMinus(salary);
   var pid = document.getElementById(lineupPos + "-pid").innerHTML;
   var playerpid = document.getElementById(pid);
   document.getElementById(lineupPos + "-player").innerHTML = "";
@@ -85,16 +90,37 @@ function removePlayer(lineupPos) {
 
 }
 
-function totalSalary(s) {
-
-  var avgRemain = document.getElementById("avgRemain");
+function totalSalaryAdd(s) {
   var innerSalRemain = document.getElementById("salRemain").innerHTML;
-  var salRemain = parseInt(innerSalRemain);
-  var playerSalary = s/1000;
-  var totalSal = (salRemain - playerSalary) * 1000;
-  document.getElementById("salRemain").innerHTML = totalSal.toLocaleString();
-  console.log(salRemain);
-  console.log(playerSalary);
+  var salRemain = parseFloat(innerSalRemain.replace(/[^0-9-.]/g, ''));
+  salRemain = parseInt(salRemain);
+  var playerSalary = s;
+  var totalSal = salRemain - playerSalary;
+  if(totalSal >= 0){
+    document.getElementById("salRemain").innerHTML = totalSal.toLocaleString();
+  } else {
+    document.getElementById("salRemain").innerHTML = totalSal.toLocaleString();
+    document.getElementById("avgSalSpan").classList.remove("neon-green");
+    document.getElementById("avgSalSpan").classList.add("neon-red");
+  }
+
+}
+
+function totalSalaryMinus(s) {
+  var playerSalary = parseFloat(s.replace(/[^0-9-.]/g, ''));
+  var innerSalRemain = document.getElementById("salRemain").innerHTML;
+  var salRemain = parseFloat(innerSalRemain.replace(/[^0-9-.]/g, ''));
+  salRemain = parseInt(salRemain);
+  var totalSal = salRemain + playerSalary;
+
+  if(totalSal >= 0){
+    document.getElementById("salRemain").innerHTML = totalSal.toLocaleString();
+    document.getElementById("avgSalSpan").classList.remove("neon-red");
+    document.getElementById("avgSalSpan").classList.add("neon-green");
+  } else {
+    document.getElementById("salRemain").innerHTML = totalSal.toLocaleString();
+
+  }
 
 
 }

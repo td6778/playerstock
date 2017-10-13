@@ -427,11 +427,11 @@
       <div class="col-4"><h3>Lineup</h3></div>
       <div class="col-4 avg-rem-div">
         <span class="avg-rem-txt">Avg. Rem./Player:</span>
-        <span class="avg-rem neon-green bold numbers">$<span id="avgRemain">5,555</span></span>
+        <span id="avgRemSpan" class="avg-rem neon-green bold numbers">$<span id="avgRemain">5,555</span></span>
       </div>
       <div class="col-4 rem-salary-div">
         <span class="avg-rem-txt">Rem. Salary:&nbsp;</span>
-        <span class="avg-rem neon-green bold numbers">$<span id="salRemain">50,000</span></span>
+        <span id="avgSalSpan" class="avg-rem neon-green bold numbers">$<span id="salRemain">50,000</span></span>
       </div>
     </div>
     <div class="psTableHeader">
