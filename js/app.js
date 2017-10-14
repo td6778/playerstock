@@ -1,12 +1,15 @@
 function home(){
     window.location.href = 'index.html';
 }
+
+
 $(function () {
   $('[data-toggle="popover"]').popover()
 });
 
-function addPlayer(pid,posid,playerfullname, opp, fppg, salary){
-  var flexid = "";
+var rowcount = 0;
+
+function addPlayer(pid,posid,playerfullname, opp, fppg, salary) {
   switch (posid) {
     case 1:
         var pos = "qb";
@@ -32,17 +35,22 @@ function addPlayer(pid,posid,playerfullname, opp, fppg, salary){
           }
         break;
     case 4:
-        var pos = "te";
+    if (document.getElementById("te-player").innerHTML.trim().length === 0) {
+      var pos = "te";
+    } else {
+      var pos = "flex";
+    }
       break;
     case 5:
           var pos = "dst";
       break;
     default: var pos ="";
   }
-
+  var flexid = "";
   var playerpid = document.getElementById(pid);
   var flexid = document.getElementById(pid + "flex");
   var allid = document.getElementById(pid + "all");
+  var modalid = document.getElementById(pid + "modal-click");
   var pospid = document.getElementById(pos + "-pid");
   var posplayer = document.getElementById(pos + "-player");
   var posopp = document.getElementById(pos + "-opp");
@@ -66,19 +74,20 @@ function addPlayer(pid,posid,playerfullname, opp, fppg, salary){
     }
     allid.classList.remove("show-block");
     allid.classList.add("hidden");
-
-
+    modalid.onclick = null;
+    rowcount++;
   } else {
     console.log("Position Filled");
   }
+  averageRemaining();
 }
 
 function removePlayer(lineupPos) {
-
   var salary = document.getElementById(lineupPos + "-salary").innerHTML;
   totalSalaryMinus(salary);
   var pid = document.getElementById(lineupPos + "-pid").innerHTML;
   var playerpid = document.getElementById(pid);
+  document.getElementById(lineupPos + "-pid").innerHTML = "";
   document.getElementById(lineupPos + "-player").innerHTML = "";
   document.getElementById(lineupPos + "-opp").innerHTML = "";
   document.getElementById(lineupPos + "-fppg").innerHTML = "";
@@ -87,8 +96,11 @@ function removePlayer(lineupPos) {
   document.getElementById(lineupPos + "-close").classList.add("hidden");
   playerpid.classList.remove("hidden");
   playerpid.classList.add("show-block");
+  rowcount--;
+  averageRemaining();
 
 }
+
 
 function totalSalaryAdd(s) {
   var innerSalRemain = document.getElementById("salRemain").innerHTML;
@@ -106,21 +118,39 @@ function totalSalaryAdd(s) {
 
 }
 
+
 function totalSalaryMinus(s) {
   var playerSalary = parseFloat(s.replace(/[^0-9-.]/g, ''));
   var innerSalRemain = document.getElementById("salRemain").innerHTML;
   var salRemain = parseFloat(innerSalRemain.replace(/[^0-9-.]/g, ''));
   salRemain = parseInt(salRemain);
   var totalSal = salRemain + playerSalary;
-
   if(totalSal >= 0){
     document.getElementById("salRemain").innerHTML = totalSal.toLocaleString();
     document.getElementById("avgSalSpan").classList.remove("neon-red");
     document.getElementById("avgSalSpan").classList.add("neon-green");
   } else {
     document.getElementById("salRemain").innerHTML = totalSal.toLocaleString();
-
   }
-
-
 }
+
+function averageRemaining(){
+  var rows = 9 - rowcount;
+  var innerSalRemain = document.getElementById("salRemain").innerHTML;
+  var salRemain = parseFloat(innerSalRemain.replace(/[^0-9-.]/g, ''));
+  salRemain = parseInt(salRemain);
+  var averageRemainingSalary = salRemain/rows;
+  averageRemainingSalary = Math.round(averageRemainingSalary);
+
+  if(averageRemainingSalary <= 0){
+    document.getElementById("avgRemain").innerHTML = averageRemainingSalary.toLocaleString();
+    document.getElementById("avgRemSpan").classList.remove("neon-green");
+    document.getElementById("avgRemSpan").classList.add("neon-red");
+  } else {
+    document.getElementById("avgRemain").innerHTML = averageRemainingSalary.toLocaleString();
+    document.getElementById("avgRemSpan").classList.remove("neon-red");
+    document.getElementById("avgRemSpan").classList.add("neon-green");
+  }
+}
+
+//

@@ -100,52 +100,61 @@
                       <div class=\"pshead dt-add modal-add\">&nbsp;</div>
                     </div>";
                   $teamID = $row["teamID"];
+                  $abbrv = $row["abbrv"];
                   $sql2 = "SELECT * FROM legends_player WHERE teamID=$teamID AND  posID = 1";
                   $result2 = mysqli_query($conn, $sql2);
                   while($row = mysqli_fetch_assoc($result2)) {
                     $salary = number_format($row["salary"]);
-                    echo "<div class=\"draftTableData modalData\">
+                    $playerfullname = $row["player_first"] . " " . $row["player_last"];
+                    $qbargs = $row["playerID"] . "," . $row["posID"] . ",'" . $playerfullname . "','" . $abbrv . "'," . $row["fppg"] . ","  . $row["salary"];
+                    echo "<div id=\"" . $row["playerID"] . "modal\" class=\"draftTableData modalData\">
                       <div class=\"dtdata dt-pos\">QB</div>
-                      <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+                      <div class=\"dtdata dt-player\">" . $playerfullname ."</div>
                       <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
                       <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
-                      <div class=\"dtdata dt-add modal-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+                      <div class=\"dtdata dt-add modal-add\"><i id=\"" . $row["playerID"] . "modal-click\" class=\"fa fa-plus-square\" aria-hidden=\"true\" onclick=\"addPlayer(" . $qbargs . ")\"></i></div>
                     </div>";
                   }
                   $sql3 = "SELECT * FROM legends_player WHERE teamID=$teamID AND  posID = 2";
                   $result3 = mysqli_query($conn, $sql3);
                   while($row = mysqli_fetch_assoc($result3)) {
                     $salary = number_format($row["salary"]);
-                    echo "<div class=\"draftTableData modalData\">
+                    $playerfullname = $row["player_first"] . " " . $row["player_last"];
+                    $rbargs = $row["playerID"] . "," . $row["posID"] . ",'" . $playerfullname . "','" . $abbrv . "'," . $row["fppg"] . ","  . $row["salary"];
+                    echo "<div id=\"" . $row["playerID"] . "modal\" class=\"draftTableData modalData\">
                       <div class=\"dtdata dt-pos\">RB</div>
-                      <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+                      <div class=\"dtdata dt-player\">" . $playerfullname ."</div>
                       <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
                       <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
-                      <div class=\"dtdata dt-add modal-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+                      <div class=\"dtdata dt-add modal-add\"><i id=\"" . $row["playerID"] . "modal-click\" class=\"fa fa-plus-square\" aria-hidden=\"true\" onclick=\"addPlayer(" . $rbargs . ")\"></i></div>
                     </div>";
                   }
                   $sql4 = "SELECT * FROM legends_player WHERE teamID=$teamID AND  posID = 3";
                   $result4 = mysqli_query($conn, $sql4);
                   while($row = mysqli_fetch_assoc($result4)) {
                     $salary = number_format($row["salary"]);
-                    echo "<div class=\"draftTableData modalData\">
+                    $playerfullname = $row["player_first"] . " " . $row["player_last"];
+                    $wrargs = $row["playerID"] . "," . $row["posID"] . ",'" . $playerfullname . "','" . $abbrv . "'," . $row["fppg"] . ","  . $row["salary"];
+                    echo "<div id=\"" . $row["playerID"] . "modal\" class=\"draftTableData modalData\">
                       <div class=\"dtdata dt-pos\">WR</div>
-                      <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+                      <div class=\"dtdata dt-player\">" . $playerfullname ."</div>
                       <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
                       <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
-                      <div class=\"dtdata dt-add modal-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+                      <div class=\"dtdata dt-add modal-add\"><i id=\"" . $row["playerID"] . "modal-click\" class=\"fa fa-plus-square\" aria-hidden=\"true\" onclick=\"addPlayer(" . $wrargs . ")\"></i></div>
                     </div>";
                   }
                   $sql5 = "SELECT * FROM legends_player WHERE teamID=$teamID AND  posID = 4";
                   $result5 = mysqli_query($conn, $sql5);
                   while($row = mysqli_fetch_assoc($result5)) {
                     $salary = number_format($row["salary"]);
-                    echo "<div class=\"draftTableData modalData\">
+                    $playerfullname = $row["player_first"] . " " . $row["player_last"];
+                    $teargs = $row["playerID"] . "," . $row["posID"] . ",'" . $playerfullname . "','" . $abbrv . "'," . $row["fppg"] . ","  . $row["salary"];
+                    echo "<div id=\"" . $row["playerID"] . "modal\" class=\"draftTableData modalData\">
                       <div class=\"dtdata dt-pos\">TE</div>
-                      <div class=\"dtdata dt-player\">" . $row["player_first"] . " " . $row["player_last"] ."</div>
+                      <div class=\"dtdata dt-player\">" . $playerfullname ."</div>
                       <div class=\"dtdata dt-fppg\">" . $row["fppg"] . "</div>
                       <div class=\"dtdata dt-salary\">" . "$" . $salary . "</div>
-                      <div class=\"dtdata dt-add modal-add\"><i class=\"fa fa-plus-square\" aria-hidden=\"true\"></i></div>
+                      <div class=\"dtdata dt-add modal-add\"><i id=\"" . $row["playerID"] . "modal-click\" class=\"fa fa-plus-square\" aria-hidden=\"true\" onclick=\"addPlayer(" . $teargs . ")\"></i></div>
                     </div>";
                   }
                   echo
@@ -424,10 +433,10 @@
   </div><!-- end left col -->
   <div class="col-6">
     <div class="row ps-table-header vs-30">
-      <div class="col-4"><h3>Lineup</h3></div>
-      <div class="col-4 avg-rem-div">
+      <div class="col-3"><h3>Lineup</h3></div>
+      <div class="col-5 avg-rem-div">
         <span class="avg-rem-txt">Avg. Rem./Player:</span>
-        <span id="avgRemSpan" class="avg-rem neon-green bold numbers">$<span id="avgRemain">5,555</span></span>
+        <span id="avgRemSpan" class="avg-rem neon-green bold numbers">$<span id="avgRemain">5,556</span></span>
       </div>
       <div class="col-4 rem-salary-div">
         <span class="avg-rem-txt">Rem. Salary:&nbsp;</span>

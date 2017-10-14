@@ -947,6 +947,9 @@ table.table.branded.headless tbody tr:nth-child(odd) {
   display: inline-block;
   margin-top: 2px;
 }
+.col-5.avg-rem-div {
+    padding-left: 40px;
+}
 .avg-rem-div {
   border-right: 1px solid #ccc;
 }
