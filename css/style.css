@@ -49,6 +49,7 @@ a:visited {
 .bold {
   font-weight: bold;
 }
+
 .numbers {
   font-family: Georgia;
   position: relative;
@@ -965,6 +966,16 @@ table.table.branded.headless tbody tr:nth-child(odd) {
     font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
     margin: 10px 0;
     float: right;
+    cursor: pointer;
+}
+.btn.btn-disabled {
+  background-color: #c0c0c0;
+  color: #dcdcdc;
+  font-weight: bold;
+  font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
+  margin: 10px 0 0 10px;
+  float: left;
+  cursor: not-allowed;
 }
 .btn.btn-submit:hover,
 .btn.btn-import:hover {
@@ -981,6 +992,7 @@ table.table.branded.headless tbody tr:nth-child(odd) {
   font-family: 'PT Sans Narrow','Trebuchet MS',Tahoma,sans-serif;
   margin: 10px 0;
   float: left;
+  cursor: pointer;
 }
 .btn.btn-clear:hover {
   background-color: #696969;
@@ -1385,6 +1397,18 @@ tr.even {
     text-align: left;
 }
 /* ***************** End Modal/Popover CSS ********************** */
+
+/* ***************** Start alert-position-filled CSS ********************** */
+.alert-position-filled {
+  position: absolute;
+  top: 390px;
+  left: 30px;
+  width: 90%;
+}
+.close-alert {
+  cursor: pointer;
+}
+/* ***************** End alert-position-filled CSS ********************** */
 #footer {
     background-color: #1a1a1a;
     width: 100%;

@@ -76,8 +76,10 @@ function addPlayer(pid,posid,playerfullname, opp, fppg, salary) {
     allid.classList.add("hidden");
     modalid.onclick = null;
     rowcount++;
+    autoAdvancePosition(pos);
   } else {
     console.log("Position Filled");
+    $('#alertPositionFilled').show();
   }
   averageRemaining();
 }
@@ -154,3 +156,58 @@ function averageRemaining(){
 }
 
 //
+function hideAlertPositionFilled() {
+    $('#alertPositionFilled').hide();
+}
+
+function autoAdvancePosition(pos) {
+  var checkbox = document.getElementById("aap").checked;
+  if(checkbox === true){
+    switch (pos) {
+      case "qb":
+      document.getElementById("rb-tab").click();
+      break;
+      case "rb2":
+      document.getElementById("wr-tab").click();
+      break;
+      case "wr3":
+      document.getElementById("te-tab").click();
+      break;
+      case "te":
+      document.getElementById("flex-tab").click();
+      break;
+      case "flex":
+      document.getElementById("dst-tab").click();
+      break;
+      case "dst":
+      document.getElementById("qb-tab").click();
+      break;
+    }
+  }
+}
+
+function clearAll() {
+  var pos = ["qb","rb1","rb2","wr1","wr2","wr3","te","flex","dst"];
+  for(i = 0; i < pos.length; i++){
+    var playerpid = document.getElementById(pos[i] + "-pid").innerHTML;
+    if(playerpid !== ""){
+    document.getElementById(pos[i] + "-pid").innerHTML = "";
+    document.getElementById(pos[i] + "-player").innerHTML = "";
+    document.getElementById(pos[i] + "-opp").innerHTML = "";
+    document.getElementById(pos[i] + "-fppg").innerHTML = "";
+    document.getElementById(pos[i] + "-oprk").innerHTML = "";
+    document.getElementById(pos[i] + "-salary").innerHTML = "";
+    document.getElementById(pos[i] + "-close").classList.add("hidden");
+    document.getElementById(playerpid).classList.remove("hidden");
+    document.getElementById(playerpid).classList.add("show-block");
+  }
+  }
+
+  rowcount = 0;
+  document.getElementById("avgRemain").innerHTML = "5,556";
+  document.getElementById("avgRemSpan").classList.remove("neon-red");
+  document.getElementById("avgRemSpan").classList.add("neon-green");
+  document.getElementById("salRemain").innerHTML = "50,000";
+  document.getElementById("avgSalSpan").classList.remove("neon-red");
+  document.getElementById("avgSalSpan").classList.add("neon-green");
+}

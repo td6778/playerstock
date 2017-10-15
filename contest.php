@@ -189,22 +189,22 @@
       <a class="nav-link active draft-tabs" id="qb-tab" data-toggle="tab" href="#qb" role="tab" aria-controls="home" aria-expanded="false">QB</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#rb" role="tab" aria-controls="profile" aria-expanded="false">RB</a>
+      <a class="nav-link draft-tabs" id="rb-tab" data-toggle="tab" href="#rb" role="tab" aria-controls="profile" aria-expanded="false">RB</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#wr" role="tab" aria-controls="profile" aria-expanded="false">WR</a>
+      <a class="nav-link draft-tabs" id="wr-tab" data-toggle="tab" href="#wr" role="tab" aria-controls="profile" aria-expanded="false">WR</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#te" role="tab" aria-controls="profile" aria-expanded="false">TE</a>
+      <a class="nav-link draft-tabs" id="te-tab" data-toggle="tab" href="#te" role="tab" aria-controls="profile" aria-expanded="false">TE</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#flex" role="tab" aria-controls="profile" aria-expanded="false">FLEX</a>
+      <a class="nav-link draft-tabs" id="flex-tab" data-toggle="tab" href="#flex" role="tab" aria-controls="profile" aria-expanded="false">FLEX</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#dst" role="tab" aria-controls="profile" aria-expanded="false">DST</a>
+      <a class="nav-link draft-tabs" id="dst-tab" data-toggle="tab" href="#dst" role="tab" aria-controls="profile" aria-expanded="false">DST</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link draft-tabs" id="profile-tab" data-toggle="tab" href="#all" role="tab" aria-controls="profile" aria-expanded="false">ALL</a>
+      <a class="nav-link draft-tabs" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="profile" aria-expanded="false">ALL</a>
     </li>
   </ul>
   <div class="psTableHeader">
@@ -545,8 +545,8 @@
     <div class="row"><!--Row 2 --></div>
     <div class="row">
         <div class="col-5">
-          <a href="#" class="btn btn-clear">CLEAR</a>
-          <a href="#" class="btn btn-import">IMPORT</a>
+          <button class="btn btn-clear" onclick="clearAll()">CLEAR</button>
+          <button class="btn btn-disabled">IMPORT</button>
         </div>
         <div class="col-3">
           <!-- middle col -->
@@ -555,6 +555,15 @@
           <a href="mycontests.php" class="btn btn-submit">ENTER&nbsp;&nbsp;<span id="contestFee" class="contest-fee-border">FREE</span></a>
         </div>
     </div>
+    <!--- start alert popup -->
+
+    <div id="alertPositionFilled" class="alert alert-danger alert-position-filled hidden" >
+      <i class="fa fa-times fa-1 float-right close-alert" aria-hidden="true" aria-label="close" title="close" onclick="hideAlertPositionFilled()"></i>
+      <!-- <a href="#" class="close" aria-label="close" title="close" onclick="hideAlertPositionFilled()">×</a> -->
+      Position is already filled!
+  </div>
+
+  <!--- end alert popup -->
   </div><!-- end right col -->
   </div>
 </div>
