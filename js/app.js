@@ -141,18 +141,26 @@ function averageRemaining(){
   var innerSalRemain = document.getElementById("salRemain").innerHTML;
   var salRemain = parseFloat(innerSalRemain.replace(/[^0-9-.]/g, ''));
   salRemain = parseInt(salRemain);
-  var averageRemainingSalary = salRemain/rows;
-  averageRemainingSalary = Math.round(averageRemainingSalary);
+  console.log(salRemain);
+  if(salRemain !== 0){
+    var averageRemainingSalary = salRemain/rows;
+    averageRemainingSalary = Math.round(averageRemainingSalary);
 
-  if(averageRemainingSalary <= 0){
-    document.getElementById("avgRemain").innerHTML = averageRemainingSalary.toLocaleString();
-    document.getElementById("avgRemSpan").classList.remove("neon-green");
-    document.getElementById("avgRemSpan").classList.add("neon-red");
+    if(averageRemainingSalary <= 0){
+      document.getElementById("avgRemain").innerHTML = averageRemainingSalary.toLocaleString();
+      document.getElementById("avgRemSpan").classList.remove("neon-green");
+      document.getElementById("avgRemSpan").classList.add("neon-red");
+    } else {
+      document.getElementById("avgRemain").innerHTML = averageRemainingSalary.toLocaleString();
+      document.getElementById("avgRemSpan").classList.remove("neon-red");
+      document.getElementById("avgRemSpan").classList.add("neon-green");
+    }
   } else {
-    document.getElementById("avgRemain").innerHTML = averageRemainingSalary.toLocaleString();
+    document.getElementById("avgRemain").innerHTML = 0;
     document.getElementById("avgRemSpan").classList.remove("neon-red");
     document.getElementById("avgRemSpan").classList.add("neon-green");
   }
+
 }
 
 //
