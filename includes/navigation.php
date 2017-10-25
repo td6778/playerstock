@@ -1,6 +1,6 @@
 <div class="primary-nav">
     <div class="container">
-        <div class="primary-nav-rt">Text right</div>
+        <div class="primary-nav-rt"><i class="fa fa-user-o" aria-hidden="true"></i></div>
     <ul class="nav">
       <li class="nav-item logo">
             <img src="images/logo-sm.png" alt="" class="logo-sm" onclick="home()" />
